@@ -9,9 +9,14 @@
 	</head>
 
 <style>
+body {margin:0;
+	background: black;
+}
+
+
 .styled-table {
     border-collapse: collapse;
-    margin: 2px 0;
+    padding: 3px;
     font-size: 0.8em;
     font-family: sans-serif;
     width: 100%;
@@ -20,27 +25,31 @@
 .styled-table thead tr {
     background-color: #000000;
     color: #ffffff;
-    text-align: right;
+    text-align: center;
 }
 .styled-table th,
 .styled-table td {
-   color: #ffffff;	
-    padding: 5px 7px;
-    text-align: right;
+   color: #eeeeee;	
+    padding-right: 20px;
+	padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: center;
 }
 .styled-table tbody tr {
     border-bottom: 1px solid #dddddd;
 }
 .styled-table tbody tr:nth-of-type(odd) {
-    background-color: #111111;
+    background-color: #222222;
 }
 .styled-table tbody tr:nth-of-type(even) {
-    background-color: #000000;
+    background-color: #111111;
 }
 
 .styled-table tbody tr:last-of-type {
     border-bottom: 2px solid #009879;
 }
+
+img {border-radius: 50%}
 </style>
 
 
@@ -63,7 +72,7 @@
 		<img src="https://lh3.googleusercontent.com/P9GncWlHc4G5dC3EZuJVTL1hnVR4e4mj_OjofacuHqPBdM7Kn5S2DOIAd-Wpg1pAa8jh4_gHj4KC3jcP9txOuXMtbhSfk0v1JZHp7g=s130" width="70" height="70">
 		
 		</br>Cool Dogs</td>
-	    <td><h2 id="floor_price_cd"></h2></td>
+	    <td><h1 id="floor_price_cd"></h1></td>
 	    <td><a id="one_day_sales_cd"></a></td>
             <td><a id="seven_day_sales_cd"></a></td>
 	    <td><a id="thirty_day_sales_cd"></a></td>
@@ -72,7 +81,7 @@
             <td>
 		<img src="https://lh3.googleusercontent.com/hMbOHECbaMtuobe66b0D3XL7c27SCjuR-TB1YmyTOYv7fLEZqMjE_Qv-Y5sMuyz5wV3QlxSaiUOOlJ2_FsI26fRoEUE1Jh6RAFPowA=s130" width="70" height="70">
 		</br>Fortune</br>Friends</td>
-	    <td><h2 id="floor_price_ff"></h2></td>
+	    <td><h1 id="floor_price_ff"></h1></td>
 	    <td><a id="one_day_sales_ff"></a></td>
             <td><a id="seven_day_sales_ff"></a></td>
 	    <td><a id="thirty_day_sales_ff"></a></td>
@@ -81,7 +90,7 @@
             <td>
 		<img src="https://lh3.googleusercontent.com/NKIm3YiJegP-njvy3m6Fwq7MvGmIvHCngCeY_TwFaM01AxFUO9OESvwH6JNRiNIdwitaswS65gQmQk-uiJhZ2zi2m274wVvUaOk7-g=s130" width="70" height="70">
 		</br>MTG</td>
-	    <td><h2 id="floor_price_mtg"></h2></td>
+	    <td><h1 id="floor_price_mtg"></h1></td>
 	    <td><a id="one_day_sales_mtg"></a></td>
             <td><a id="seven_day_sales_mtg"></a></td>
 	    <td><a id="thirty_day_sales_mtg"></a></td>
@@ -90,8 +99,8 @@
             <td>
 		<img src="https://lh3.googleusercontent.com/44uszvFuhdf8IBjTlaVoPPlLufgUVQw9zlU3wMVPB7_P2-B1cRl8dZwrwEozUPWaWgX7iFLFrFVDxIz2qEsEJEsjPgMj7L50OEK1sQ=s130" width="70" height="70">
 		</br>
-		The</br>Moose</br>Society</td>
-	    <td><h2 id="floor_price_tms"></h2></td>
+		The Moose</br>Society</td>
+	    <td><h1 id="floor_price_tms"></h1></td>
 	    <td><a id="one_day_sales_tms"></a></td>
             <td><a id="seven_day_sales_tms"></a></td>
 	    <td><a id="thirty_day_sales_tms"></a></td>
@@ -100,8 +109,8 @@
             <td>
 		<img src="https://lh3.googleusercontent.com/Anst2xSHp90bfX9y3uDKE6adu5L9nmoyApk6z40K39ngoT35MHioHn2cf3ZvtF4kLe8s-Pa2GcYbaRyT_m5je7ZRggJVNAUUDk4m=s130" width="70" height="70">
 		</br>
-		Hybrid</br>Factions</br>Genesis</td>
-	    <td><h2 id="floor_price_hf"></h2></td>
+		Hybrid</br>Factions</td>
+	    <td><h1 id="floor_price_hf"></h1></td>
 	    <td><a id="one_day_sales_hf"></a></td>
             <td><a id="seven_day_sales_hf"></a></td>
 	    <td><a id="thirty_day_sales_hf"></a></td>
@@ -176,6 +185,3 @@ document.getElementById("thirty_day_sales_hf").textContent = podaci_hf.stats.thi
 </script>
 	</body>
 </html>
-
-
-
