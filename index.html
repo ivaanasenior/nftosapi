@@ -18,21 +18,24 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 .styled-table thead tr {
-    background-color: #009879;
+    background-color: #000000;
     color: #ffffff;
     text-align: right;
 }
 .styled-table th,
 .styled-table td {
+   color: #ffffff;	
     padding: 5px 7px;
     text-align: right;
 }
 .styled-table tbody tr {
     border-bottom: 1px solid #dddddd;
 }
-
+.styled-table tbody tr:nth-of-type(odd) {
+    background-color: #111111;
+}
 .styled-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
+    background-color: #000000;
 }
 
 .styled-table tbody tr:last-of-type {
@@ -59,7 +62,7 @@
             <td>
 		<img src="https://lh3.googleusercontent.com/P9GncWlHc4G5dC3EZuJVTL1hnVR4e4mj_OjofacuHqPBdM7Kn5S2DOIAd-Wpg1pAa8jh4_gHj4KC3jcP9txOuXMtbhSfk0v1JZHp7g=s130" width="70" height="70">
 		
-		</br>Cool</br>Dogs</td>
+		</br>Cool Dogs</td>
 	    <td><h2 id="floor_price_cd"></h2></td>
 	    <td><a id="one_day_sales_cd"></a></td>
             <td><a id="seven_day_sales_cd"></a></td>
@@ -77,7 +80,7 @@
 	<tr>
             <td>
 		<img src="https://lh3.googleusercontent.com/NKIm3YiJegP-njvy3m6Fwq7MvGmIvHCngCeY_TwFaM01AxFUO9OESvwH6JNRiNIdwitaswS65gQmQk-uiJhZ2zi2m274wVvUaOk7-g=s130" width="70" height="70">
-		</br>More</br>Than</br>Gamers</td>
+		</br>MTG</td>
 	    <td><h2 id="floor_price_mtg"></h2></td>
 	    <td><a id="one_day_sales_mtg"></a></td>
             <td><a id="seven_day_sales_mtg"></a></td>
@@ -173,5 +176,6 @@ document.getElementById("thirty_day_sales_hf").textContent = podaci_hf.stats.thi
 </script>
 	</body>
 </html>
+
 
 
