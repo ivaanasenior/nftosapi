@@ -24,7 +24,7 @@
 }
 .styled-table th,
 .styled-table td {
-    padding: 3px 5px;
+    padding: 10px 7px;
     text-align: right;
 }
 .styled-table tbody tr {
@@ -47,17 +47,17 @@
 <table class="styled-table">
     <thead>
         <tr>
-            <th>Kolekcija</th>
-            <th>Floor price</th>
-            <th>24h</th>
-            <th>7d</th>
-	    <th>30d</th>		
+            <th>NFT</th>
+            <th>Floor</br>price</th>
+            <th>Sales</br>24h</th>
+            <th>Sales</br>7d</th>
+	    <th>Sales</br>30d</th>		
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>
-		<img src="https://lh3.googleusercontent.com/P9GncWlHc4G5dC3EZuJVTL1hnVR4e4mj_OjofacuHqPBdM7Kn5S2DOIAd-Wpg1pAa8jh4_gHj4KC3jcP9txOuXMtbhSfk0v1JZHp7g=s130" width="70" height="70">
+		<img src="https://lh3.googleusercontent.com/P9GncWlHc4G5dC3EZuJVTL1hnVR4e4mj_OjofacuHqPBdM7Kn5S2DOIAd-Wpg1pAa8jh4_gHj4KC3jcP9txOuXMtbhSfk0v1JZHp7g=s130" width="50" height="50">
 		
 		</br>Cool</br>Dogs</td>
 	    <td><h2 id="floor_price_cd"></h2></td>
@@ -67,7 +67,7 @@
         </tr>
        <tr>
             <td>
-		<img src="https://lh3.googleusercontent.com/hMbOHECbaMtuobe66b0D3XL7c27SCjuR-TB1YmyTOYv7fLEZqMjE_Qv-Y5sMuyz5wV3QlxSaiUOOlJ2_FsI26fRoEUE1Jh6RAFPowA=s130" width="70" height="70">
+		<img src="https://lh3.googleusercontent.com/hMbOHECbaMtuobe66b0D3XL7c27SCjuR-TB1YmyTOYv7fLEZqMjE_Qv-Y5sMuyz5wV3QlxSaiUOOlJ2_FsI26fRoEUE1Jh6RAFPowA=s130" width="50" height="50">
 		</br>Fortune</br>Friends</td>
 	    <td><h2 id="floor_price_ff"></h2></td>
 	    <td><a id="one_day_sales_ff"></a></td>
@@ -76,7 +76,7 @@
         </tr>
 	<tr>
             <td>
-		<img src="https://lh3.googleusercontent.com/NKIm3YiJegP-njvy3m6Fwq7MvGmIvHCngCeY_TwFaM01AxFUO9OESvwH6JNRiNIdwitaswS65gQmQk-uiJhZ2zi2m274wVvUaOk7-g=s130" width="70" height="70">
+		<img src="https://lh3.googleusercontent.com/NKIm3YiJegP-njvy3m6Fwq7MvGmIvHCngCeY_TwFaM01AxFUO9OESvwH6JNRiNIdwitaswS65gQmQk-uiJhZ2zi2m274wVvUaOk7-g=s130" width="50" height="50">
 		</br>More</br>Than</br>Gamers</td>
 	    <td><h2 id="floor_price_mtg"></h2></td>
 	    <td><a id="one_day_sales_mtg"></a></td>
@@ -85,7 +85,7 @@
         </tr>
 	<tr>
             <td>
-		<img src="https://lh3.googleusercontent.com/44uszvFuhdf8IBjTlaVoPPlLufgUVQw9zlU3wMVPB7_P2-B1cRl8dZwrwEozUPWaWgX7iFLFrFVDxIz2qEsEJEsjPgMj7L50OEK1sQ=s130" width="70" height="70">
+		<img src="https://lh3.googleusercontent.com/44uszvFuhdf8IBjTlaVoPPlLufgUVQw9zlU3wMVPB7_P2-B1cRl8dZwrwEozUPWaWgX7iFLFrFVDxIz2qEsEJEsjPgMj7L50OEK1sQ=s130" width="50" height="50">
 		</br>
 		The</br>Moose</br>Society</td>
 	    <td><h2 id="floor_price_tms"></h2></td>
@@ -95,7 +95,7 @@
         </tr>
 	 <tr>
             <td>
-		<img src="https://lh3.googleusercontent.com/Anst2xSHp90bfX9y3uDKE6adu5L9nmoyApk6z40K39ngoT35MHioHn2cf3ZvtF4kLe8s-Pa2GcYbaRyT_m5je7ZRggJVNAUUDk4m=s130" width="70" height="70">
+		<img src="https://lh3.googleusercontent.com/Anst2xSHp90bfX9y3uDKE6adu5L9nmoyApk6z40K39ngoT35MHioHn2cf3ZvtF4kLe8s-Pa2GcYbaRyT_m5je7ZRggJVNAUUDk4m=s130" width="50" height="50">
 		</br>
 		Hybrid</br>Factions</br>Genesis</td>
 	    <td><h2 id="floor_price_hf"></h2></td>
@@ -114,7 +114,7 @@ const options_cd = {method: 'GET', headers: {Accept: 'application/json'}};
 fetch('https://api.opensea.io/api/v1/collection/cooldogsofficial/stats', options_cd)
   .then(response => response.json())
   .then(data => {let podaci_cd = data;
-document.getElementById("floor_price_cd").textContent = podaci_cd.stats.floor_price; 
+document.getElementById("floor_price_cd").textContent = podaci_cd.stats.floor_price.toFixed(3); 
 document.getElementById("one_day_sales_cd").textContent = podaci_cd.stats.one_day_sales; 
 document.getElementById("seven_day_sales_cd").textContent = podaci_cd.stats.seven_day_sales; 
 document.getElementById("thirty_day_sales_cd").textContent = podaci_cd.stats.thirty_day_sales; 
@@ -125,7 +125,7 @@ const options_ff = {method: 'GET', headers: {Accept: 'application/json'}};
 fetch('https://api.opensea.io/api/v1/collection/fortune-friends-club-official-nft/stats', options_ff)
   .then(response => response.json())
   .then(data => {let podaci_ff = data;
-document.getElementById("floor_price_ff").textContent = podaci_ff.stats.floor_price; 
+document.getElementById("floor_price_ff").textContent = podaci_ff.stats.floor_price.toFixed(3); 
 document.getElementById("one_day_sales_ff").textContent = podaci_ff.stats.one_day_sales; 
 document.getElementById("seven_day_sales_ff").textContent = podaci_ff.stats.seven_day_sales; 
 document.getElementById("thirty_day_sales_ff").textContent = podaci_ff.stats.thirty_day_sales; 
@@ -137,7 +137,7 @@ const options_mtg = {method: 'GET', headers: {Accept: 'application/json'}};
 fetch('https://api.opensea.io/api/v1/collection/morethangamersnftmtg/stats', options_mtg)
   .then(response => response.json())
   .then(data => {let podaci_mtg = data;
-document.getElementById("floor_price_mtg").textContent = podaci_mtg.stats.floor_price; 
+document.getElementById("floor_price_mtg").textContent = podaci_mtg.stats.floor_price.toFixed(3); 
 document.getElementById("one_day_sales_mtg").textContent = podaci_mtg.stats.one_day_sales; 
 document.getElementById("seven_day_sales_mtg").textContent = podaci_mtg.stats.seven_day_sales; 
 document.getElementById("thirty_day_sales_mtg").textContent = podaci_mtg.stats.thirty_day_sales; 
@@ -149,7 +149,7 @@ const options_tms = {method: 'GET', headers: {Accept: 'application/json'}};
 fetch('https://api.opensea.io/api/v1/collection/themoosesociety/stats', options_tms)
   .then(response => response.json())
   .then(data => {let podaci_tms = data;
-document.getElementById("floor_price_tms").textContent = podaci_tms.stats.floor_price; 
+document.getElementById("floor_price_tms").textContent = podaci_tms.stats.floor_price.toFixed(3); 
 document.getElementById("one_day_sales_tms").textContent = podaci_tms.stats.one_day_sales; 
 document.getElementById("seven_day_sales_tms").textContent = podaci_tms.stats.seven_day_sales; 
 document.getElementById("thirty_day_sales_tms").textContent = podaci_tms.stats.thirty_day_sales; 
@@ -162,7 +162,7 @@ const options_hf = {method: 'GET', headers: {Accept: 'application/json'}};
 fetch('https://api.opensea.io/api/v1/collection/hybrid-factions/stats', options_hf)
   .then(response => response.json())
   .then(data => {let podaci_hf = data;
-document.getElementById("floor_price_hf").textContent = podaci_hf.stats.floor_price; 
+document.getElementById("floor_price_hf").textContent = podaci_hf.stats.floor_price.toFixed(3); 
 document.getElementById("one_day_sales_hf").textContent = podaci_hf.stats.one_day_sales; 
 document.getElementById("seven_day_sales_hf").textContent = podaci_hf.stats.seven_day_sales; 
 document.getElementById("thirty_day_sales_hf").textContent = podaci_hf.stats.thirty_day_sales; 
@@ -173,3 +173,4 @@ document.getElementById("thirty_day_sales_hf").textContent = podaci_hf.stats.thi
 </script>
 	</body>
 </html>
+
