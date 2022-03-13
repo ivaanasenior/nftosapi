@@ -118,7 +118,17 @@ img {border-radius: 50%}
             <td><a id="seven_day_sales_hf"></a></td>
 	    <td><a id="thirty_day_sales_hf"></a></td>
         </tr>
-	
+	<tr>
+            <td>
+		
+	    <td><h2 id="floor_price_all"></h2></td>
+	    <td><a id="one_day_sales_all"></a></td>
+            <td><a id="seven_day_sales_all"></a></td>
+	    <td><a id="thirty_day_sales_all"></a></td>
+        </tr>
+
+
+
     </tbody>
 </table>
 
@@ -184,6 +194,19 @@ document.getElementById("thirty_day_sales_hf").textContent = podaci_hf.stats.thi
 })
   .catch(err => console.error(err)); 	
 
+
+const options_all = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch(https://api.opensea.io/api/v1/collections?asset_owner=0x62ffefd4f48ae27f04233ee053f676e2f772837b&offset=0&limit=300', options_all)
+  .then(response => response.json())
+  .then(data => {let podaci_all = data;
+document.getElementById("floor_price_all").textContent = podaci_all.stats.floor_price.toFixed(3); 
+document.getElementById("one_day_sales_all").textContent = podaci_all.stats.one_day_sales; 
+document.getElementById("seven_day_sales_all").textContent = podaci_all.stats.seven_day_sales; 
+document.getElementById("thirty_day_sales_all").textContent = podaci_all.stats.thirty_day_sales; 
+})
+  .catch(err => console.error(err)); 		
+	
+	
 	
 </script>
 	</body>
