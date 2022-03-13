@@ -122,6 +122,7 @@ img {border-radius: 50%}
             <td>
 		
 	    <td><h2 id="address"></h2></td>
+	    <td><h2 id="address2"></h2></td>
         </tr>
 
 
@@ -198,6 +199,8 @@ fetch('https://api.opensea.io/api/v1/collections?asset_owner=0x62ffefd4f48ae27f0
   .then(data => {let podaci_address = data;
 
 document.getElementById("address").textContent = podaci_address.primary_asset_contracts[0].address; 
+document.getElementById("address2").textContent = podaci_address.primary_asset_contracts[1].address; 
+		 
 })
   .catch(err => console.error(err)); 		
 	
