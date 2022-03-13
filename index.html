@@ -196,7 +196,7 @@ document.getElementById("thirty_day_sales_hf").textContent = podaci_hf.stats.thi
 
 
 const options_all = {method: 'GET', headers: {Accept: 'application/json'}};
-fetch(https://api.opensea.io/api/v1/collections?asset_owner=0x62ffefd4f48ae27f04233ee053f676e2f772837b&offset=0&limit=300', options_all)
+fetch('https://api.opensea.io/api/v1/collections?asset_owner=0x62ffefd4f48ae27f04233ee053f676e2f772837b&offset=0&limit=300', options_all)
   .then(response => response.json())
   .then(data => {let podaci_all = data;
 document.getElementById("floor_price_all").textContent = podaci_all.stats.floor_price.toFixed(3); 
