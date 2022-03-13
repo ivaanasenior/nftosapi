@@ -118,12 +118,7 @@ img {border-radius: 50%}
             <td><a id="seven_day_sales_hf"></a></td>
 	    <td><a id="thirty_day_sales_hf"></a></td>
         </tr>
-	<tr>
-		
-	    <td><h2 id="address"></h2></td>
-	    <td><h2 id="address2"></h2></td>
-        </tr>
-
+	
 
 
     </tbody>
@@ -192,17 +187,6 @@ document.getElementById("thirty_day_sales_hf").textContent = podaci_hf.stats.thi
   .catch(err => console.error(err)); 	
 
 
-const options_address = {method: 'GET', headers: {Accept: 'application/json'}};
-fetch('https://api.opensea.io/api/v1/collections?asset_owner=0x62ffefd4f48ae27f04233ee053f676e2f772837b&offset=0&limit=300', options_address)
-  .then(response => response.json())
-  .then(data => {let podaci_address = data;
-
-document.getElementById("address").textContent = podaci_address.primary_asset_contracts[0].address; 
-document.getElementById("address2").textContent = podaci_address.primary_asset_contracts[1].address; 
-		 
-})
-  .catch(err => console.error(err)); 		
-	
 	
 	
 </script>
