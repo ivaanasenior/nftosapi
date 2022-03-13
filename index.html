@@ -121,10 +121,7 @@ img {border-radius: 50%}
 	<tr>
             <td>
 		
-	    <td><h2 id="floor_price_all"></h2></td>
-	    <td><a id="one_day_sales_all"></a></td>
-            <td><a id="seven_day_sales_all"></a></td>
-	    <td><a id="thirty_day_sales_all"></a></td>
+	    <td><h2 id="address"></h2></td>
         </tr>
 
 
@@ -195,12 +192,12 @@ document.getElementById("thirty_day_sales_hf").textContent = podaci_hf.stats.thi
   .catch(err => console.error(err)); 	
 
 
-const options_all = {method: 'GET', headers: {Accept: 'application/json'}};
-fetch('https://api.opensea.io/api/v1/collections?asset_owner=0x62ffefd4f48ae27f04233ee053f676e2f772837b&offset=0&limit=300', options_all)
+const options_address = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch('https://api.opensea.io/api/v1/collections?asset_owner=0x62ffefd4f48ae27f04233ee053f676e2f772837b&offset=0&limit=300', options_address)
   .then(response => response.json())
-  .then(data => {let podaci_all = data;
+  .then(data => {let podaci_address = data;
 
-document.getElementById("floor_price_all").textContent = podaci_all.primary_asset_contracts[0].address; 
+document.getElementById("address").textContent = podaci_all.primary_asset_contracts[0].address; 
 })
   .catch(err => console.error(err)); 		
 	
