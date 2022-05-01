@@ -234,8 +234,10 @@ const options_tpl = {method: 'GET', headers: {Accept: 'application/json'}. 'X-AP
 fetch('https://api.opensea.io/api/v1/events?only_opensea=true&asset_contract_address=0x8c3FB10693B228E8b976FF33cE88f97Ce2EA9563&event_type=created', options_tpl)
   .then(response => response.json())
   .then(data => {let podaci_tpl = data;
-for (var i=0; i<20; i++)
-document.getElementById("floor_price_tpi").textContent = podaci_tpi.asset_id; 	
+		 
+for(var i = 0; i < asset.length; i++) {
+    var obj = asset[i];
+document.getElementById("floor_price_tpi").textContent = podaci_tpi.asset_id;}
 </script>
 	</body>
 </html>
