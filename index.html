@@ -12,7 +12,11 @@
 body {margin:0;
 	background: #1c0702;
 }
-
+.td {max-width: 48%;
+     align: left;
+     text-color: white;}
+.td#text {
+     color: white;}
 
 .table {
     margin-top: 15px;
@@ -21,6 +25,7 @@ body {margin:0;
     margin-right: auto;
     font-size: 1.5em;
     font-family: sans-serif;
+    color: white;
     width: 90%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     align: center;
@@ -37,12 +42,13 @@ body {margin:0;
 }
 
 
-.table td {
-    color: #eeeeee;	
+.table.td {
+    color: #555555;	
     padding-right: 2px;
     padding-top: 5px;
     padding-bottom: 5px;
     text-align: center;
+    max-width: 25%;
 }
 .table tbody tr {
     border-bottom: 1px solid #dddddd;
@@ -63,6 +69,7 @@ h2 {color: #d6bb0d;
 }
 a {
 text-size: 1em;
+color: white;
 text-shadow: 1px 1px 1px white;}
 </style>
 
@@ -83,20 +90,25 @@ for (i = 0; i < 20; i++) {
     var sve = [podaci_tp_listings.asset_events[i].asset.image_thumbnail_url, podaci_tp_listings.asset_events[i].asset.token_id,  timeSince(new Date(podaci_tp_listings.asset_events[i].listing_time)),  podaci_tp_listings.asset_events[i].starting_price/1000000000000000000];
     tr = document.createElement('tr'),
     tr.classList.add('tr');
-    tr.classList.add('table.tbody.tr');
     table.appendChild(tr);
     
-  
-
     td = document.createElement('td'), 
-    td.classList.add('table.td');      
-    table.appendChild(td);
+    td.classList.add('td');      
+    tr.appendChild(td);
     td.innerHTML = "<img src='"+sve[0]+"'/>";
 
-    for (j = 1; j < 4; j++){
     td = document.createElement('td'),
-    td.classList.add('table.td');       
-    table.appendChild(td);
+    td.classList.add('td');       
+    tr.appendChild(td);
+
+   
+    
+    for (j = 1; j < 4; j++){
+    tr = document.createElement('tr'),
+    td.appendChild(tr);
+
+    td = document.createElement('td'),      
+    tr.appendChild(td);
     td.innerHTML = sve[j];
     };
 }
