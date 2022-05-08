@@ -10,134 +10,233 @@
 
 <style>
 body {margin:0;
-	background: #1c0702;
+	background: #12a4d9;
 }
-.td {max-width: 48%;
-     align: right;}
-.td#text {
-     color: white;}
 
-.table {
+
+.styled-table {
     margin-top: 15px;
     padding-left: 0px;
-   
-    font-size: 1.7em;
+    margin-left: auto; 
+    margin-right: auto;
+    
+    font-size: 1em;
+    
     font-family: sans-serif;
-    color: white;
-    width: 85%;
+    width: 90%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     align: center;
 }
-.table thead tr {
-    background-color: #053761;
+.styled-table thead tr {
+    background-color: #d9138a;
     text-align: center;
     font-size: 0.8em;
 }
-
-.table thead td {
+.styled-table thead th,
+.styled-table thead td {
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-
-.table td {
-    color: #FFFFFF;	
+.styled-table th,
+.styled-table td {
+    color: #eeeeee;	
     padding-right: 2px;
     padding-top: 5px;
     padding-bottom: 5px;
-    align: right;
-    max-width: 85%;
+    text-align: center;
 }
-.table tbody tr {
+.styled-table tbody tr {
     border-bottom: 1px solid #dddddd;
 }
-.table tbody tr:nth-of-type(odd) {
-    background-color: #052f73;
+.styled-table tbody tr:nth-of-type(odd) {
+    background-color: #000000;
 }
-.table tbody tr:nth-of-type(even) {
-    background-color: #063b91;
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #322e2f;
 }
 
-.table tbody tr:last-of-type {
+.styled-table tbody tr:last-of-type {
     border-bottom: 2px solid #009879;
 }
+
+img {border-radius: 50%}
 h2 {color: #d6bb0d;
    text-shadow: 1px 2px 1px black,
                0px 0px 1px green;
 }
-a {
-text-size: 1em;
-color: white;
-text-shadow: 1px 1px 1px white;}
-
+a {text-shadow: 1px 1px 1px black;}
 </style>
 
-<body>
+
+
+
+	<body>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Collection</th>
+            <th>Floor</br>price</th>
+            <th>Sales</br>24h</th>
+            <th>Sales</br>7d</th>
+	    <th>Sales</br>30d</th>		
+        </tr>
+    </thead>
+    <tbody>
+         <tr>
+            <td>
+		<img src="https://lh3.googleusercontent.com/izJoLNVOJnj7W7GW_hdg8pwOTohxgJ9Z2w1E8iZdAWd2NXkqQWxKY2FCOaWPvNzixyQ0kV6RcwSajYVocPzwtANaV5nQETvGwMNb_g=s130" width="70" height="70">
+		</br>The Plague</td>
+	    <td><h2 id="floor_price_tp"></h2></td>
+	    <td><a id="one_day_sales_tp"></a></td>
+            <td><a id="seven_day_sales_tp"></a></td>
+	    <td><a id="thirty_day_sales_tp"></a></td>
+        </tr>
+        <tr>
+            <td>
+		<img src="https://lh3.googleusercontent.com/b16MIrgz9g5P-WLPmKvQJaPl5xYHJXzMFQ83oce_rDUYeTrmdYlCQ8WAH7IyROwSEloo5zBHosqVL_aB6oT3iq9jTAaUEswUPNr1=s130" width="70" height="70">
+		</br>Ugly People</td>
+	    <td><h2 id="floor_price_up"></h2></td>
+	    <td><a id="one_day_sales_up"></a></td>
+            <td><a id="seven_day_sales_up"></a></td>
+	    <td><a id="thirty_day_sales_up"></a></td>
+        </tr>
+       <tr>
+            <td>
+		<img src="https://lh3.googleusercontent.com/hMbOHECbaMtuobe66b0D3XL7c27SCjuR-TB1YmyTOYv7fLEZqMjE_Qv-Y5sMuyz5wV3QlxSaiUOOlJ2_FsI26fRoEUE1Jh6RAFPowA=s130" width="70" height="70">
+		</br>Fortune</br>Friends</td>
+	    <td><h2 id="floor_price_ff"></h2></td>
+	    <td><a id="one_day_sales_ff"></a></td>
+            <td><a id="seven_day_sales_ff"></a></td>
+	    <td><a id="thirty_day_sales_ff"></a></td>
+        </tr>
+	<tr>
+            <td>
+		<img src="https://lh3.googleusercontent.com/NKIm3YiJegP-njvy3m6Fwq7MvGmIvHCngCeY_TwFaM01AxFUO9OESvwH6JNRiNIdwitaswS65gQmQk-uiJhZ2zi2m274wVvUaOk7-g=s130" width="70" height="70">
+		</br>MTG</td>
+	    <td><h2 id="floor_price_mtg"></h2></td>
+	    <td><a id="one_day_sales_mtg"></a></td>
+            <td><a id="seven_day_sales_mtg"></a></td>
+	    <td><a id="thirty_day_sales_mtg"></a></td>
+        </tr>
+	<tr>
+            <td>
+		<img src="https://lh3.googleusercontent.com/44uszvFuhdf8IBjTlaVoPPlLufgUVQw9zlU3wMVPB7_P2-B1cRl8dZwrwEozUPWaWgX7iFLFrFVDxIz2qEsEJEsjPgMj7L50OEK1sQ=s130" width="70" height="70">
+		</br>
+		The Moose</br>Society</td>
+	    <td><h2 id="floor_price_tms"></h2></td>
+	    <td><a id="one_day_sales_tms"></a></td>
+            <td><a id="seven_day_sales_tms"></a></td>
+	    <td><a id="thirty_day_sales_tms"></a></td>
+        </tr>
+	 <tr>
+            <td>
+		<img src="https://lh3.googleusercontent.com/Anst2xSHp90bfX9y3uDKE6adu5L9nmoyApk6z40K39ngoT35MHioHn2cf3ZvtF4kLe8s-Pa2GcYbaRyT_m5je7ZRggJVNAUUDk4m=s130" width="70" height="70">
+		</br>
+		Hybrid</br>Factions</td>
+	    <td><h2 id="floor_price_hf"></h2></td>
+	    <td><a id="one_day_sales_hf"></a></td>
+            <td><a id="seven_day_sales_hf"></a></td>
+	    <td><a id="thirty_day_sales_hf"></a></td>
+        </tr>
+	<tr>
+            <td>
+		<img src="https://lh3.googleusercontent.com/P9GncWlHc4G5dC3EZuJVTL1hnVR4e4mj_OjofacuHqPBdM7Kn5S2DOIAd-Wpg1pAa8jh4_gHj4KC3jcP9txOuXMtbhSfk0v1JZHp7g=s130" width="70" height="70">
+		</br>Cool Dogs</td>
+	    <td><h2 id="floor_price_cd"></h2></td>
+	    <td><a id="one_day_sales_cd"></a></td>
+            <td><a id="seven_day_sales_cd"></a></td>
+	    <td><a id="thirty_day_sales_cd"></a></td>
+        </tr>
+
+
+    </tbody>
+</table>
+
 <script>
-const options_tp_listings = {method: 'GET', headers: {Accept: 'application/json', 'X-API-KEY': 'bcc09c72f00646b7a4724bb0c11afc18'}};
-fetch('https://api.opensea.io/api/v1/events?only_opensea=true&asset_contract_address=0x8c3FB10693B228E8b976FF33cE88f97Ce2EA9563&event_type=created', options_tp_listings)
+
+
+const options_cd = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch('https://api.opensea.io/api/v1/collection/cooldogsofficial/stats', options_cd)
   .then(response => response.json())
-  .then(data => {let podaci_tp_listings = data;
+  .then(data => {let podaci_cd = data;
+document.getElementById("floor_price_cd").textContent = podaci_cd.stats.floor_price.toFixed(3); 
+document.getElementById("one_day_sales_cd").textContent = podaci_cd.stats.one_day_sales; 
+document.getElementById("seven_day_sales_cd").textContent = podaci_cd.stats.seven_day_sales; 
+document.getElementById("thirty_day_sales_cd").textContent = podaci_cd.stats.thirty_day_sales; 
+})
+  .catch(err => console.error(err));
+	
+const options_ff = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch('https://api.opensea.io/api/v1/collection/fortune-friends-club-official-nft/stats', options_ff)
+  .then(response => response.json())
+  .then(data => {let podaci_ff = data;
+document.getElementById("floor_price_ff").textContent = podaci_ff.stats.floor_price.toFixed(3); 
+document.getElementById("one_day_sales_ff").textContent = podaci_ff.stats.one_day_sales; 
+document.getElementById("seven_day_sales_ff").textContent = podaci_ff.stats.seven_day_sales; 
+document.getElementById("thirty_day_sales_ff").textContent = podaci_ff.stats.thirty_day_sales; 
+})
+  .catch(err => console.error(err)); 	
 
-    table = document.createElement('table');
-    table.classList.add('table');
-    
-    
-for (i = 0; i < 20; i++) {
-    var sve = [podaci_tp_listings.asset_events[i].asset.image_thumbnail_url, podaci_tp_listings.asset_events[i].asset.token_id,  timeSince(new Date(podaci_tp_listings.asset_events[i].listing_time)),  podaci_tp_listings.asset_events[i].starting_price/1000000000000000000];
-    tr = document.createElement('tr'),
-    tr.classList.add('tr');
-    table.appendChild(tr);
-    
-    td = document.createElement('td'), 
-    td.classList.add('td');      
-    tr.appendChild(td);
-    td.innerHTML = "<img src='"+sve[0]+"'/>";
-
-    td = document.createElement('td'),
-    td.classList.add('td');       
-    tr.appendChild(td);
-
-   
-    
-    for (j = 1; j < 4; j++){
-    tr = document.createElement('tr'),
-    td.appendChild(tr);
-
-    td = document.createElement('td'),      
-    tr.appendChild(td);
-    td.innerHTML = sve[j];
-    };
-}
-document.body.appendChild(table);
-});
+	
+const options_mtg = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch('https://api.opensea.io/api/v1/collection/morethangamersnftmtg/stats', options_mtg)
+  .then(response => response.json())
+  .then(data => {let podaci_mtg = data;
+document.getElementById("floor_price_mtg").textContent = podaci_mtg.stats.floor_price.toFixed(3); 
+document.getElementById("one_day_sales_mtg").textContent = podaci_mtg.stats.one_day_sales; 
+document.getElementById("seven_day_sales_mtg").textContent = podaci_mtg.stats.seven_day_sales; 
+document.getElementById("thirty_day_sales_mtg").textContent = podaci_mtg.stats.thirty_day_sales; 
+})
+  .catch(err => console.error(err)); 	
 
 
-function timeSince(date) {
-  var seconds = Math.floor((new Date() - date) / 1000);
+const options_tms = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch('https://api.opensea.io/api/v1/collection/themoosesociety/stats', options_tms)
+  .then(response => response.json())
+  .then(data => {let podaci_tms = data;
+document.getElementById("floor_price_tms").textContent = podaci_tms.stats.floor_price.toFixed(3); 
+document.getElementById("one_day_sales_tms").textContent = podaci_tms.stats.one_day_sales; 
+document.getElementById("seven_day_sales_tms").textContent = podaci_tms.stats.seven_day_sales; 
+document.getElementById("thirty_day_sales_tms").textContent = podaci_tms.stats.thirty_day_sales; 
+})
+  .catch(err => console.error(err)); 
 
-  var interval = Math.floor(seconds / 31536000);
-  if (interval > 1) {
-    return interval + " years";
-  }
-  interval = Math.floor(seconds / 2592000);
-  if (interval > 1) {
-    return interval + " months";
-  }
-  interval = Math.floor(seconds / 86400);
-  if (interval > 1) {
-    return interval + " days";
-  }
-  interval = Math.floor(seconds / 3600);
-  if (interval > 2) {
-    return interval -2  + " hours";
-  }
-  interval = Math.floor(seconds / 60);
-  if (interval + 120 > 120) {
-    return interval - 120 + " min";
-  }
-  return Math.floor(seconds) + " sec";
-}
+
+
+const options_hf = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch('https://api.opensea.io/api/v1/collection/hybrid-factions/stats', options_hf)
+  .then(response => response.json())
+  .then(data => {let podaci_hf = data;
+document.getElementById("floor_price_hf").textContent = podaci_hf.stats.floor_price.toFixed(3); 
+document.getElementById("one_day_sales_hf").textContent = podaci_hf.stats.one_day_sales; 
+document.getElementById("seven_day_sales_hf").textContent = podaci_hf.stats.seven_day_sales; 
+document.getElementById("thirty_day_sales_hf").textContent = podaci_hf.stats.thirty_day_sales; 
+})
+  .catch(err => console.error(err)); 	
+
+const options_tp = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch('https://api.opensea.io/api/v1/collection/the-plague/stats', options_tp)
+  .then(response => response.json())
+  .then(data => {let podaci_tp = data;
+document.getElementById("floor_price_tp").textContent = podaci_tp.stats.floor_price.toFixed(3); 
+document.getElementById("one_day_sales_tp").textContent = podaci_tp.stats.one_day_sales; 
+document.getElementById("seven_day_sales_tp").textContent = podaci_tp.stats.seven_day_sales; 
+document.getElementById("thirty_day_sales_tp").textContent = podaci_tp.stats.thirty_day_sales; 
+})
+  .catch(err => console.error(err)); 	
+
+const options_up = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch('https://api.opensea.io/api/v1/collection/ugly-people-torrealba/stats', options_up)
+  .then(response => response.json())
+  .then(data => {let podaci_up = data;
+document.getElementById("floor_price_up").textContent = podaci_up.stats.floor_price.toFixed(3); 
+document.getElementById("one_day_sales_up").textContent = podaci_up.stats.one_day_sales; 
+document.getElementById("seven_day_sales_up").textContent = podaci_up.stats.seven_day_sales; 
+document.getElementById("thirty_day_sales_up").textContent = podaci_up.stats.thirty_day_sales; 
+})
+  .catch(err => console.error(err)); 	
+	
 </script>
-</body>
+	</body>
 </html>
