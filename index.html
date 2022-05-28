@@ -120,6 +120,16 @@ a {text-shadow: 1px 1px 1px black;}
             <td><a id="seven_day_sales_mtg"></a></td>
 	    <td><a id="thirty_day_sales_mtg"></a></td>
         </tr>
+        <tr>
+            <td>
+		<img src="https://lh3.googleusercontent.com/vKEdfsymdCw3dwquLH315fkRZJYaquwOmDERWN7D218FLzN_NP4xEpB6f6t7HG1dlZzbT5XyFCHSdoo50G2a65p_7qHEYac3TD2oKw=s168" width="70" height="70">
+		</br>
+		The Moose</br>Society</td>
+	    <td><h2 id="floor_price_aia"></h2></td>
+	    <td><a id="one_day_sales_aia"></a></td>
+            <td><a id="seven_day_sales_aia"></a></td>
+	    <td><a id="thirty_day_sales_aia"></a></td>
+        </tr>
 	<tr>
             <td>
 		<img src="https://lh3.googleusercontent.com/44uszvFuhdf8IBjTlaVoPPlLufgUVQw9zlU3wMVPB7_P2-B1cRl8dZwrwEozUPWaWgX7iFLFrFVDxIz2qEsEJEsjPgMj7L50OEK1sQ=s130" width="70" height="70">
@@ -256,6 +266,17 @@ document.getElementById("thirty_day_sales_fef").textContent = podaci_fef.stats.t
 })
   .catch(err => console.error(err)); 
 
+const options_aia = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch('https://api.opensea.io/api/v1/collection/aiapescollection/stats', options_aia)
+  .then(response => response.json())
+  .then(data => {let podaci_aia = data;
+document.getElementById("floor_price_aia").textContent = podaci_aia.stats.floor_price.toFixed(3); 
+document.getElementById("one_day_sales_aia").textContent = podaci_aia.stats.one_day_sales; 
+document.getElementById("seven_day_sales_aia").textContent = podaci_aia.stats.seven_day_sales; 
+document.getElementById("thirty_day_sales_aia").textContent = podaci_aia.stats.thirty_day_sales; 
+})
+  .catch(err => console.error(err));
+	
 	
 </script>
 	</body>
