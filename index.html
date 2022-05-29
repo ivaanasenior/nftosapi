@@ -140,15 +140,6 @@ a {text-shadow: 1px 1px 1px black;}
             <td><a id="seven_day_sales_tms"></a></td>
 	    <td><a id="thirty_day_sales_tms"></a></td>
         </tr>
-	 <tr>
-            <td>
-		<img src="https://lh3.googleusercontent.com/Anst2xSHp90bfX9y3uDKE6adu5L9nmoyApk6z40K39ngoT35MHioHn2cf3ZvtF4kLe8s-Pa2GcYbaRyT_m5je7ZRggJVNAUUDk4m=s130" width="70" height="70">
-		</td>
-	    <td><h2 id="floor_price_hf"></h2></td>
-	    <td><a id="one_day_sales_hf"></a></td>
-            <td><a id="seven_day_sales_hf"></a></td>
-	    <td><a id="thirty_day_sales_hf"></a></td>
-        </tr>
 	<tr>
             <td>
 		<img src="https://lh3.googleusercontent.com/P9GncWlHc4G5dC3EZuJVTL1hnVR4e4mj_OjofacuHqPBdM7Kn5S2DOIAd-Wpg1pAa8jh4_gHj4KC3jcP9txOuXMtbhSfk0v1JZHp7g=s130" width="70" height="70">
@@ -218,19 +209,7 @@ document.getElementById("seven_day_sales_tms").textContent = podaci_tms.stats.se
 document.getElementById("thirty_day_sales_tms").textContent = podaci_tms.stats.thirty_day_sales; 
 })
   .catch(err => console.error(err)); 
-
-
-
-const options_hf = {method: 'GET', headers: {Accept: 'application/json'}};
-fetch('https://api.opensea.io/api/v1/collection/hybrid-factions/stats', options_hf)
-  .then(response => response.json())
-  .then(data => {let podaci_hf = data;
-document.getElementById("floor_price_hf").textContent = podaci_hf.stats.floor_price.toFixed(3); 
-document.getElementById("one_day_sales_hf").textContent = podaci_hf.stats.one_day_sales; 
-document.getElementById("seven_day_sales_hf").textContent = podaci_hf.stats.seven_day_sales; 
-document.getElementById("thirty_day_sales_hf").textContent = podaci_hf.stats.thirty_day_sales; 
-})
-  .catch(err => console.error(err)); 	
+	
 
 const options_tp = {method: 'GET', headers: {Accept: 'application/json'}};
 fetch('https://api.opensea.io/api/v1/collection/the-plague/stats', options_tp)
