@@ -111,6 +111,15 @@ a {text-shadow: 1px 1px 1px black;}
             <td><a id="seven_day_sales_ff"></a></td>
 	    <td><a id="thirty_day_sales_ff"></a></td>
         </tr>
+	<tr onclick="window.location='https://opensea.io/collection/itsnothing-nft?search[sortBy]=PRICE&search[sortAscending]=true&search[toggles][0]=BUY_NOW';">
+            <td>
+		<img src="https://openseauserdata.com/files/fff17ab2c2e0b000f4d0f54e0f62560e.png" width="50" height="50">
+		</td>
+	    <td><h2 id="floor_price_null"></h2></td>
+	    <td><a id="one_day_sales_null"></a></td>
+            <td><a id="seven_day_sales_null"></a></td>
+	    <td><a id="thirty_day_sales_mull"></a></td>
+        </tr>    
 	<tr onclick="window.location='https://opensea.io/collection/morethangamersnftmtg?search[sortBy]=PRICE&search[sortAscending]=true&search[toggles][0]=BUY_NOW';">
             <td>
 		<img src="https://lh3.googleusercontent.com/NKIm3YiJegP-njvy3m6Fwq7MvGmIvHCngCeY_TwFaM01AxFUO9OESvwH6JNRiNIdwitaswS65gQmQk-uiJhZ2zi2m274wVvUaOk7-g=s130" width="50" height="50">
@@ -253,6 +262,19 @@ document.getElementById("seven_day_sales_sek").textContent = podaci_sek.stats.se
 document.getElementById("thirty_day_sales_sek").textContent = podaci_sek.stats.thirty_day_sales; 
 })
   .catch(err => console.error(err));
+	
+const options_null = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch('https://api.opensea.io/api/v1/collection/itsnothing-nft/stats', options_null)
+  .then(response => response.json())
+  .then(data => {let podaci_null = data;
+document.getElementById("floor_price_null").textContent = podaci_null.stats.floor_price.toFixed(3); 
+document.getElementById("one_day_sales_null").textContent = podaci_null.stats.one_day_sales; 
+document.getElementById("seven_day_sales_null").textContent = podaci_null.stats.seven_day_sales; 
+document.getElementById("thirty_day_sales_null").textContent = podaci_null.stats.thirty_day_sales; 
+})
+  .catch(err => console.error(err));
+	
+	
 	
 	
 </script>
