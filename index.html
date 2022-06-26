@@ -197,7 +197,7 @@ const options_cd = {method: 'GET', headers: {Accept: 'application/json'}};
 fetch('https://api.opensea.io/api/v1/collection/cooldogsofficial/stats', options_cd)
   .then(response => response.json())
   .then(data => {let podaci_cd = data;
-let cd_fp = podaci_cd.stats.floor_price.toFixed(3);		 
+cd_fp = podaci_cd.stats.floor_price.toFixed(3);		 
 document.getElementById("floor_price_cd").textContent = cd_fp; 
 document.getElementById("one_day_sales_cd").textContent = podaci_cd.stats.one_day_sales; 
 document.getElementById("seven_day_sales_cd").textContent = podaci_cd.stats.seven_day_sales; 
@@ -210,7 +210,7 @@ const options_ff = {method: 'GET', headers: {Accept: 'application/json'}};
 fetch('https://api.opensea.io/api/v1/collection/fortune-friends-club-official-nft/stats', options_ff)
   .then(response => response.json())
   .then(data => {let podaci_ff = data;
-let ff_fp = podaci_ff.stats.floor_price.toFixed(3);		 
+ ff_fp = podaci_ff.stats.floor_price.toFixed(3);		 
 document.getElementById("floor_price_ff").textContent = ff_fp; 
 document.getElementById("one_day_sales_ff").textContent = podaci_ff.stats.one_day_sales; 
 document.getElementById("seven_day_sales_ff").textContent = podaci_ff.stats.seven_day_sales; 
@@ -235,7 +235,7 @@ const options_tms = {method: 'GET', headers: {Accept: 'application/json'}};
 fetch('https://api.opensea.io/api/v1/collection/themoosesociety/stats', options_tms)
   .then(response => response.json())
   .then(data => {let podaci_tms = data;
-let tms_fp = podaci_tms.stats.floor_price.toFixed(3);		 
+tms_fp = podaci_tms.stats.floor_price.toFixed(3);		 
 document.getElementById("floor_price_tms").textContent = tms_fp; 
 document.getElementById("one_day_sales_tms").textContent = podaci_tms.stats.one_day_sales; 
 document.getElementById("seven_day_sales_tms").textContent = podaci_tms.stats.seven_day_sales; 
@@ -248,7 +248,7 @@ const options_tp = {method: 'GET', headers: {Accept: 'application/json'}};
 fetch('https://api.opensea.io/api/v1/collection/the-plague/stats', options_tp)
   .then(response => response.json())
   .then(data => {let podaci_tp = data;
-let tp_fp = podaci_tp.stats.floor_price.toFixed(3);	
+tp_fp = podaci_tp.stats.floor_price.toFixed(3);	
 document.getElementById("floor_price_tp").textContent = tp_fp; 
 document.getElementById("one_day_sales_tp").textContent = podaci_tp.stats.one_day_sales; 
 document.getElementById("seven_day_sales_tp").textContent = podaci_tp.stats.seven_day_sales; 
@@ -260,7 +260,7 @@ const options_up = {method: 'GET', headers: {Accept: 'application/json'}};
 fetch('https://api.opensea.io/api/v1/collection/ugly-people-torrealba/stats', options_up)
   .then(response => response.json())
   .then(data => {let podaci_up = data;
-let up_fp = podaci_up.stats.floor_price.toFixed(3);	 
+up_fp = podaci_up.stats.floor_price.toFixed(3);	 
 document.getElementById("floor_price_up").textContent = up_fp; 
 document.getElementById("one_day_sales_up").textContent = podaci_up.stats.one_day_sales; 
 document.getElementById("seven_day_sales_up").textContent = podaci_up.stats.seven_day_sales; 
@@ -283,7 +283,7 @@ const options_sek = {method: 'GET', headers: {Accept: 'application/json'}};
 fetch('https://api.opensea.io/api/v1/collection/sekaiclub/stats', options_sek)
   .then(response => response.json())
   .then(data => {let podaci_sek = data;
-let sek_fp = podaci_sek.stats.floor_price.toFixed(3);		 
+sek_fp = podaci_sek.stats.floor_price.toFixed(3);		 
 document.getElementById("floor_price_sek").textContent = sek_fp; 
 document.getElementById("one_day_sales_sek").textContent = podaci_sek.stats.one_day_sales; 
 document.getElementById("seven_day_sales_sek").textContent = podaci_sek.stats.seven_day_sales; 
