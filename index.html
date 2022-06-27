@@ -197,7 +197,7 @@ const options_ff = {method: 'GET', headers: {Accept: 'application/json'}};
 fetch('https://api.opensea.io/api/v1/collection/fortune-friends-club-official-nft/stats', options_ff)
   .then(response => response.json())
   .then(data => {let podaci_ff = data;
-window.ff_fp = podaci_ff.stats.floor_price.toFixed(3);		 
+ff_fp = podaci_ff.stats.floor_price.toFixed(3);		 
 document.getElementById("floor_price_ff").textContent = ff_fp; 
 document.getElementById("one_day_sales_ff").textContent = podaci_ff.stats.one_day_sales; 
 document.getElementById("seven_day_sales_ff").textContent = podaci_ff.stats.seven_day_sales; 
@@ -294,7 +294,7 @@ var tms=1;
 var tp=1;
 var up=12;
 var sek=1;   	
-let vrijednostnft = ff_fp*ff;
+let vrijednostnft = window.ff_fp*ff;
 console.log(vrijednostnft);
 document.getElementById("vrijednostnfta").textContent = vrijednostnft;
 </script>
