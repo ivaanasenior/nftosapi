@@ -15,7 +15,7 @@ body {margin:0;
 }
 
 
-.styled-table {
+.styled-table, .styled-table2 {
     position: relative;
     margin-top: 0px;
     padding-left: 0px;
@@ -156,18 +156,11 @@ a {text-shadow: 1px 1px 1px black;}
 	    <td><a id="one_day_sales_fef"></a></td>
             <td><a id="seven_day_sales_fef"></a></td>
 	    <td><a id="thirty_day_sales_fef"></a></td>
-        </tr>
-	     <tr onclick="window.location='';">    
-        <td>
-		NFTS
-		</td>
-	    <td></td>
-            <td><h2 id="vrijednostnfta"></h2></td>
-
-        </tr>
+		
+		
 	 <tr onclick="window.location='';">    
         <td>
-		ETH2
+		ETH
 		</td>
 	    <td><h2 id="floor_price_mojaadresa"></h2></td>
             <td><a id="one_day_sales_mojaadresa"></a></td>
@@ -175,6 +168,16 @@ a {text-shadow: 1px 1px 1px black;}
         </tr>
 
     </tbody>
+</table>
+<table class="styled-table2">
+<tr onclick="window.location='';">    
+        <td>
+		ETH
+		</td>
+	    <td><h2 id="floor_price_mojaadresa"></h2></td>
+            <td><a id="one_day_sales_mojaadresa"></a></td>
+
+        </tr>
 </table>
 
 <script>
@@ -288,15 +291,6 @@ document.getElementById("floor_price_mojaadresa").textContent = "0x62FF";
 document.getElementById("one_day_sales_mojaadresa").textContent = mojestanje.toFixed(3); 
 })
   .catch(err => console.error(err));
-	
-var ff=2; 
-var tms=1;
-var tp=1;
-var up=12;
-var sek=1;   	
-let vrijednostnft = ff_fp*ff;
-console.log(vrijednostnft);
-document.getElementById("vrijednostnfta").textContent = vrijednostnft;
 </script>
 	</body>
 </html>
