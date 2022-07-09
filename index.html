@@ -97,7 +97,7 @@ a {text-shadow: 1px 1px 1px black;}
 	    <td><h2 id="floor_price_tp"></h2></td>
 	    <td><a id="one_day_sales_tp"></a></td>
             <td><a id="seven_day_sales_tp"></a></td>
-	    <td><a id="thirty_day_sales_tp"></a></td>
+	    
         </tr>
         <tr onclick="window.location='https://opensea.io/collection/ugly-people-torrealba?search[sortBy]=PRICE&search[sortAscending]=true&search[toggles][0]=BUY_NOW';">
             <td>
@@ -106,7 +106,7 @@ a {text-shadow: 1px 1px 1px black;}
 	    <td><h2 id="floor_price_up"></h2></td>
 	    <td><a id="one_day_sales_up"></a></td>
             <td><a id="seven_day_sales_up"></a></td>
-	    <td><a id="thirty_day_sales_up"></a></td>
+	    
         </tr>
        <tr onclick="window.location='https://opensea.io/collection/fortune-friends-club-official-nft?search[sortBy]=PRICE&search[sortAscending]=true&search[toggles][0]=BUY_NOW';">
             <td>
@@ -115,7 +115,7 @@ a {text-shadow: 1px 1px 1px black;}
 	    <td><h2 id="floor_price_ff"></h2></td>
 	    <td><a id="one_day_sales_ff"></a></td>
             <td><a id="seven_day_sales_ff"></a></td>
-	    <td><a id="thirty_day_sales_ff"></a></td>
+	   
         </tr>
 	 <tr onclick="window.location='https://opensea.io/collection/xoxonft?search[sortAscending]=true&search[sortBy]=PRICE&search[toggles][0]=BUY_NOW';">
             <td>
@@ -124,7 +124,7 @@ a {text-shadow: 1px 1px 1px black;}
 	    <td><h2 id="floor_price_xoxo"></h2></td>
 	    <td><a id="one_day_sales_xoxo"></a></td>
             <td><a id="seven_day_sales_xoxo"></a></td>
-	    <td><a id="thirty_day_sales_xoxo"></a></td>
+	   
         </tr>  
 	<tr onclick="window.location='https://opensea.io/collection/morethangamersnftmtg?search[sortBy]=PRICE&search[sortAscending]=true&search[toggles][0]=BUY_NOW';">
             <td>
@@ -133,7 +133,7 @@ a {text-shadow: 1px 1px 1px black;}
 	    <td><h2 id="floor_price_mtg"></h2></td>
 	    <td><a id="one_day_sales_mtg"></a></td>
             <td><a id="seven_day_sales_mtg"></a></td>
-	    <td><a id="thirty_day_sales_mtg"></a></td>
+	    
         </tr>
         <tr onclick="window.location='';">
             <td>
@@ -142,7 +142,7 @@ a {text-shadow: 1px 1px 1px black;}
 	    <td><h2 id="floor_price_sek"></h2></td>
 	    <td><a id="one_day_sales_sek"></a></td>
             <td><a id="seven_day_sales_sek"></a></td>
-	    <td><a id="thirty_day_sales_sek"></a></td>
+	    
         </tr>
 	<tr onclick="window.location='';">
             <td>
@@ -151,7 +151,7 @@ a {text-shadow: 1px 1px 1px black;}
 	    <td><h2 id="floor_price_tms"></h2></td>
 	    <td><a id="one_day_sales_tms"></a></td>
             <td><a id="seven_day_sales_tms"></a></td>
-	    <td><a id="thirty_day_sales_tms"></a></td>
+	    
         </tr>
 	<tr onclick="window.location='';">
             <td>
@@ -160,7 +160,7 @@ a {text-shadow: 1px 1px 1px black;}
 	    <td><h2 id="floor_price_cd"></h2></td>
 	    <td><a id="one_day_sales_cd"></a></td>
             <td><a id="seven_day_sales_cd"></a></td>
-	    <td><a id="thirty_day_sales_cd"></a></td>
+	   
         </tr>
 	<tr onclick="window.location='';">    
         <td>
@@ -169,7 +169,7 @@ a {text-shadow: 1px 1px 1px black;}
 	    <td><h2 id="floor_price_fef"></h2></td>
 	    <td><a id="one_day_sales_fef"></a></td>
             <td><a id="seven_day_sales_fef"></a></td>
-	    <td><a id="thirty_day_sales_fef"></a></td>
+	    
 	</tr>
 	<tr onclick="window.location='';">    
 	 <td>
@@ -178,7 +178,7 @@ a {text-shadow: 1px 1px 1px black;}
 	    <td><h2 id="floor_price_seals"></h2></td>
 	    <td><a id="one_day_sales_seals"></a></td>
             <td><a id="seven_day_sales_seals"></a></td>
-	    <td><a id="thirty_day_sales_seals"></a></td>
+	    
 	</tr>	
 	 
 
@@ -190,7 +190,7 @@ a {text-shadow: 1px 1px 1px black;}
 		ETH
 		</td>
 	    <td><h1 id="floor_price_mojaadresa"></h1></td>
-            <td><a id="one_day_sales_mojaadresa"></a></td>
+            <td><h1 id="one_day_sales_mojaadresa"></h1></td>
 
         </tr>
 </table>
@@ -205,8 +205,7 @@ fetch('https://api.opensea.io/api/v1/collection/cooldogsofficial/stats', options
 cd_fp = podaci_cd.stats.floor_price.toFixed(3);		 
 document.getElementById("floor_price_cd").textContent = cd_fp; 
 document.getElementById("one_day_sales_cd").textContent = podaci_cd.stats.one_day_sales; 
-document.getElementById("seven_day_sales_cd").textContent = podaci_cd.stats.seven_day_sales; 
-document.getElementById("thirty_day_sales_cd").textContent = podaci_cd.stats.thirty_day_sales; 
+document.getElementById("seven_day_sales_cd").textContent = podaci_cd.stats.seven_day_sales;  
 		 
 })
   .catch(err => console.error(err));
@@ -218,8 +217,7 @@ fetch('https://api.opensea.io/api/v1/collection/fortune-friends-club-official-nf
 window.ff_fp = podaci_ff.stats.floor_price.toFixed(3);		 
 document.getElementById("floor_price_ff").textContent = ff_fp; 
 document.getElementById("one_day_sales_ff").textContent = podaci_ff.stats.one_day_sales; 
-document.getElementById("seven_day_sales_ff").textContent = podaci_ff.stats.seven_day_sales; 
-document.getElementById("thirty_day_sales_ff").textContent = podaci_ff.stats.thirty_day_sales; 
+document.getElementById("seven_day_sales_ff").textContent = podaci_ff.stats.seven_day_sales;  
 })
   .catch(err => console.error(err)); 	
 
@@ -230,8 +228,7 @@ fetch('https://api.opensea.io/api/v1/collection/morethangamersnftmtg/stats', opt
   .then(data => {let podaci_mtg = data;
 document.getElementById("floor_price_mtg").textContent = podaci_mtg.stats.floor_price.toFixed(3); 
 document.getElementById("one_day_sales_mtg").textContent = podaci_mtg.stats.one_day_sales; 
-document.getElementById("seven_day_sales_mtg").textContent = podaci_mtg.stats.seven_day_sales; 
-document.getElementById("thirty_day_sales_mtg").textContent = podaci_mtg.stats.thirty_day_sales; 
+document.getElementById("seven_day_sales_mtg").textContent = podaci_mtg.stats.seven_day_sales;  
 })
   .catch(err => console.error(err)); 	
 
@@ -244,7 +241,6 @@ tms_fp = podaci_tms.stats.floor_price.toFixed(3);
 document.getElementById("floor_price_tms").textContent = tms_fp; 
 document.getElementById("one_day_sales_tms").textContent = podaci_tms.stats.one_day_sales; 
 document.getElementById("seven_day_sales_tms").textContent = podaci_tms.stats.seven_day_sales; 
-document.getElementById("thirty_day_sales_tms").textContent = podaci_tms.stats.thirty_day_sales; 
 })
   .catch(err => console.error(err)); 
 	
@@ -257,7 +253,6 @@ tp_fp = podaci_tp.stats.floor_price.toFixed(3);
 document.getElementById("floor_price_tp").textContent = tp_fp; 
 document.getElementById("one_day_sales_tp").textContent = podaci_tp.stats.one_day_sales; 
 document.getElementById("seven_day_sales_tp").textContent = podaci_tp.stats.seven_day_sales; 
-document.getElementById("thirty_day_sales_tp").textContent = podaci_tp.stats.thirty_day_sales; 
 })
   .catch(err => console.error(err)); 	
 
@@ -268,8 +263,7 @@ fetch('https://api.opensea.io/api/v1/collection/ugly-people-torrealba/stats', op
 up_fp = podaci_up.stats.floor_price.toFixed(3);	 
 document.getElementById("floor_price_up").textContent = up_fp; 
 document.getElementById("one_day_sales_up").textContent = podaci_up.stats.one_day_sales; 
-document.getElementById("seven_day_sales_up").textContent = podaci_up.stats.seven_day_sales; 
-document.getElementById("thirty_day_sales_up").textContent = podaci_up.stats.thirty_day_sales; 
+document.getElementById("seven_day_sales_up").textContent = podaci_up.stats.seven_day_sales;  
 })
   .catch(err => console.error(err)); 	
 
@@ -280,7 +274,6 @@ fetch('https://api.opensea.io/api/v1/collection/felinefiendznft/stats', options_
 document.getElementById("floor_price_fef").textContent = podaci_fef.stats.floor_price.toFixed(3); 
 document.getElementById("one_day_sales_fef").textContent = podaci_fef.stats.one_day_sales; 
 document.getElementById("seven_day_sales_fef").textContent = podaci_fef.stats.seven_day_sales; 
-document.getElementById("thirty_day_sales_fef").textContent = podaci_fef.stats.thirty_day_sales; 
 })
   .catch(err => console.error(err)); 
 
@@ -292,7 +285,6 @@ sek_fp = podaci_sek.stats.floor_price.toFixed(3);
 document.getElementById("floor_price_sek").textContent = sek_fp; 
 document.getElementById("one_day_sales_sek").textContent = podaci_sek.stats.one_day_sales; 
 document.getElementById("seven_day_sales_sek").textContent = podaci_sek.stats.seven_day_sales; 
-document.getElementById("thirty_day_sales_sek").textContent = podaci_sek.stats.thirty_day_sales; 
 })
   .catch(err => console.error(err));
 
@@ -303,8 +295,7 @@ fetch('https://api.opensea.io/api/v1/collection/xoxonft/stats', options_xoxo)
 xoxo_fp = podaci_xoxo.stats.floor_price.toFixed(3);		 
 document.getElementById("floor_price_xoxo").textContent = xoxo_fp; 
 document.getElementById("one_day_sales_xoxo").textContent = podaci_xoxo.stats.one_day_sales; 
-document.getElementById("seven_day_sales_xoxo").textContent = podaci_xoxo.stats.seven_day_sales; 
-document.getElementById("thirty_day_sales_xoxo").textContent = podaci_xoxo.stats.thirty_day_sales; 
+document.getElementById("seven_day_sales_xoxo").textContent = podaci_xoxo.stats.seven_day_sales;  
 })
   .catch(err => console.error(err));
 	
@@ -316,7 +307,6 @@ seals_fp = podaci_seals.stats.floor_price.toFixed(3);
 document.getElementById("floor_price_seals").textContent = seals_fp; 
 document.getElementById("one_day_sales_seals").textContent = podaci_seals.stats.one_day_sales; 
 document.getElementById("seven_day_sales_seals").textContent = podaci_seals.stats.seven_day_sales; 
-document.getElementById("thirty_day_sales_seals").textContent = podaci_seals.stats.thirty_day_sales; 
 })
   .catch(err => console.error(err));	
 	
