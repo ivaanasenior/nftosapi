@@ -343,7 +343,7 @@ fetch('https://api.opensea.io/api/v1/events?only_opensea=true&asset_contract_add
 prodaje = podaci_prodaje;	 
 
 document.getElementById("prodaja_token_id0").textContent=prodaje.asset_events[0].asset.token_id;
-document.getElementById("prodaja_image0").src="prodaje.asset_events[0].asset.image_thumbnail_url";
+document.getElementById("prodaja_image0").src=prodaje.asset_events[0].asset.image_thumbnail_url;
 document.getElementById("prodaja.price0").textContent=prodaje.asset_events[0].total_price;
 document.getElementById("prodaja.timestamp0").textContent=prodaje.asset_events[0].transaction.timestamp;
 document.getElementById("prodaja_token_id1").textContent=prodaje.asset_events[1].asset.token_id;
