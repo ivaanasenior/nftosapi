@@ -114,6 +114,12 @@ a {text-shadow: 1px 1px 1px white;
             <td><a id="seven_day_sales_tp"></a></td>
 	    
         </tr>
+	<tr>
+	    <td><h2 id="prodaja_token_id0"></h2></td>	
+	    <td><h2 id="prodaja_image0"></h2></td>
+	    <td><a id="prodaja.price0"></a></td>
+            <td><a id="prodaja.timestamp0"></a></td>	
+	</tr>	
         <tr onclick="window.location='https://opensea.io/collection/ugly-people-torrealba?search[sortBy]=PRICE&search[sortAscending]=true&search[toggles][0]=BUY_NOW';">
             <td>
 		<img src="https://lh3.googleusercontent.com/b16MIrgz9g5P-WLPmKvQJaPl5xYHJXzMFQ83oce_rDUYeTrmdYlCQ8WAH7IyROwSEloo5zBHosqVL_aB6oT3iq9jTAaUEswUPNr1=s130" width="55" height="55">
@@ -334,7 +340,28 @@ const options_prodaje = {method: 'GET',headers: {accept: 'application/json', 'X-
 fetch('https://api.opensea.io/api/v1/events?only_opensea=true&asset_contract_address=0x8c3FB10693B228E8b976FF33cE88f97Ce2EA9563&event_type=successful', options_prodaje)
   .then(response => response.json())
   .then(data => {let podaci_prodaje = data;
-prodaje = podaci_prodaje;		 
+prodaje = podaci_prodaje;	 
+
+document.getElementById("prodaja_token_id0").textContent=prodaje.asset_events[0].asset.token_id;
+document.getElementById("prodaja_image0").textContent=prodaje.asset_events[0].asset.image_thumbnail_url;
+document.getElementById("prodaja.price0").textContent=prodaje.asset_events[0].payment_token.eth_price;
+document.getElementById("prodaja.timestamp0").textContent=prodaje.asset_events[0].transaction.timestamp;
+document.getElementById("prodaja_token_id1").textContent=prodaje.asset_events[1].asset.token_id;
+document.getElementById("prodaja_image1").textContent=prodaje.asset_events[1].asset.image_thumbnail_url;
+document.getElementById("prodaja.price1").textContent=prodaje.asset_events[1].payment_token.eth_price;
+document.getElementById("prodaja.timestamp1").textContent=prodaje.asset_events[1].transaction.timestamp;
+document.getElementById("prodaja_token_id2").textContent=prodaje.asset_events[2].asset.token_id;
+document.getElementById("prodaja_image2").textContent=prodaje.asset_events[2].asset.image_thumbnail_url;
+document.getElementById("prodaja.price2").textContent=prodaje.asset_events[2].payment_token.eth_price;
+document.getElementById("prodaja.timestamp2").textContent=prodaje.asset_events[2].transaction.timestamp;
+document.getElementById("prodaja_token_id3").textContent=prodaje.asset_events[3].asset.token_id;
+document.getElementById("prodaja_image3").textContent=prodaje.asset_events[3].asset.image_thumbnail_url;
+document.getElementById("prodaja.price3").textContent=prodaje.asset_events[3].payment_token.eth_price;
+document.getElementById("prodaja.timestamp3").textContent=prodaje.asset_events[3].transaction.timestamp;
+document.getElementById("prodaja_token_id4").textContent=prodaje.asset_events[4].asset.token_id;
+document.getElementById("prodaja_image4").textContent=prodaje.asset_events[4].asset.image_thumbnail_url;
+document.getElementById("prodaja.price4").textContent=prodaje.asset_events[4].payment_token.eth_price;
+document.getElementById("prodaja.timestamp4").textContent=prodaje.asset_events[4].transaction.timestamp;		 
 })
   .catch(err => console.error(err));	
 	
