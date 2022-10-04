@@ -330,11 +330,7 @@ document.getElementById("one_day_sales_mojaadresa").textContent = mojestanje.toF
 	
 	
 	
-const options = {
-  method: 'GET',
-  headers: {accept: 'application/json', 'X-API-KEY': 'bcc09c72f00646b7a4724bb0c11afc18'}
-};
-
+const options_prodaje = {method: 'GET',headers: {accept: 'application/json', 'X-API-KEY': 'bcc09c72f00646b7a4724bb0c11afc18'}};
 fetch('https://api.opensea.io/api/v1/events?only_opensea=true&asset_contract_address=0x8c3FB10693B228E8b976FF33cE88f97Ce2EA9563&event_type=successful', options_prodaje)
   .then(response => response.json())
   .then(data => {let podaci_prodaje = data;
