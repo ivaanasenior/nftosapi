@@ -388,10 +388,36 @@ fetch('https://api.opensea.io/api/v1/events?only_opensea=true&asset_contract_add
   .then(data => {let podaci_prodaje = data;
 prodaje = podaci_prodaje;	 
 
+const differencez = seconds - prodaje.asset_events[0].transaction.timestamp;
+let output = ``;
+if (difference < 60) {
+    // Less than a minute has passed:
+    output = `${difference} seconds ago`;
+} else if (difference < 3600) {
+    // Less than an hour has passed:
+    output = `${Math.floor(difference / 60)} minutes ago`;
+} else if (difference < 86400) {
+    // Less than a day has passed:
+    output = `${Math.floor(difference / 3600)} hours ago`;
+} else if (difference < 2620800) {
+    // Less than a month has passed:
+    output = `${Math.floor(difference / 86400)} days ago`;
+} else if (difference < 31449600) {
+    // Less than a year has passed:
+    output = `${Math.floor(difference / 2620800)} months ago`;
+} else {
+    // More than a year has passed:
+    output = `${Math.floor(difference / 31449600)} years ago`;
+}
+console.log(output);			 
+		 
+		 
+		 
+		 
 document.getElementById("prodaja_token_id0").textContent=prodaje.asset_events[0].asset.token_id;
 document.getElementById("prodaja_image0").src=prodaje.asset_events[0].asset.image_thumbnail_url;
 document.getElementById("prodaja.price0").textContent=prodaje.asset_events[0].total_price/1000000000000000000;
-document.getElementById("prodaja.timestamp").textContent=prodaje.asset_events[0].transaction.timestamp;
+document.getElementById("prodaja.timestamp").textContent=differencez;		 
 document.getElementById("prodaja_token_id1").textContent=prodaje.asset_events[1].asset.token_id;
 document.getElementById("prodaja_image1").src=prodaje.asset_events[1].asset.image_thumbnail_url;
 document.getElementById("prodaja.price1").textContent=prodaje.asset_events[1].total_price/1000000000000000000;
