@@ -390,8 +390,8 @@ prodaje = podaci_prodaje;
 
 		 
 const date = new Date();
-const timestampnew = date.getTime();		 
-const seconds = Math.floor(timestampnew / 1000);
+const timestamp = date.getTime();		 
+const seconds = Math.floor(timestamp / 1000);
 const oldtimestamp = Date.parse(prodaje.asset_events[0].transaction.timestamp);		 
 const difference = seconds - oldtimestamp;
 let output = ``;
