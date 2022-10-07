@@ -392,7 +392,8 @@ prodaje = podaci_prodaje;
 const date = new Date();
 const timestampnew = date.getTime();		 
 const seconds = Math.floor(timestampnew / 1000);
-const differencez = seconds - prodaje.asset_events[0].transaction.timestamp;
+const oldtimestamp = +new Date("prodaje.asset_events[0].transaction.timestamp");		 
+const differencez = seconds - oldtimestamp;
 let output = ``;
 if (difference < 60) {
     // Less than a minute has passed:
