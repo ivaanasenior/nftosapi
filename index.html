@@ -92,7 +92,7 @@ h3 {color: rgb(255, 118, 5);
 }
 
 a {text-shadow: 1px 1px 1px black;
-   font-size: 1.0em;	
+   font-size: 0.8em;	
 	color: white;}
 	
 	.styled-table2 {
@@ -457,6 +457,55 @@ if (differencet < 60000) {
     outputt = `${Math.floor(differencet / 31449600000)} years ago`;
 }		 
 		 
+
+const differencetr = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[3].event_timestamp);
+let outputtr = ``;
+if (differencetr < 60000) {
+    // Less than a minute has passed:
+    outputtr = `${differencetr} seconds ago`;
+} else if (differencetr < 3600000) {
+    // Less than an hour has passed:
+    outputtr = `${Math.floor(differencetr / 60000)} minutes ago`;
+} else if (differencetr < 86400000) {
+    // Less than a day has passed:
+    outputtr = `${Math.floor(differencetr / 3600000)} hours ago`;
+} else if (differencetr < 2620800000) {
+    // Less than a month has passed:
+    outputtr = `${Math.floor(differencetr / 86400000)} days ago`;
+} else if (differencetr < 31449600000) {
+    // Less than a year has passed:
+    outputtr = `${Math.floor(differencetr / 2620800000)} months ago`;
+} else {
+    // More than a year has passed:
+    outputtr = `${Math.floor(differencetr / 31449600000)} years ago`;
+}		 
+		 
+		 
+const differencef = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[4].event_timestamp);
+let outputtr = ``;
+if (differencef < 60000) {
+    // Less than a minute has passed:
+    outputtr = `${differencef} seconds ago`;
+} else if (differencef < 3600000) {
+    // Less than an hour has passed:
+    outputf = `${Math.floor(differencef / 60000)} minutes ago`;
+} else if (differencef < 86400000) {
+    // Less than a day has passed:
+    outputf = `${Math.floor(differencef / 3600000)} hours ago`;
+} else if (differencef < 2620800000) {
+    // Less than a month has passed:
+    outputf = `${Math.floor(differencef / 86400000)} days ago`;
+} else if (differencetr < 31449600000) {
+    // Less than a year has passed:
+    outputf = `${Math.floor(differencef / 2620800000)} months ago`;
+} else {
+    // More than a year has passed:
+    outputf = `${Math.floor(differencef / 31449600000)} years ago`;
+}
+		 
+		 
+		 
+		 
 		 
 		 
 document.getElementById("prodaja_token_id0").textContent=prodaje.asset_events[0].asset.token_id;
@@ -474,9 +523,11 @@ document.getElementById("prodaja.timestamp2").textContent=outputt;
 document.getElementById("prodaja_token_id3").textContent=prodaje.asset_events[3].asset.token_id;
 document.getElementById("prodaja_image3").src=prodaje.asset_events[3].asset.image_thumbnail_url;
 document.getElementById("prodaja.price3").textContent=prodaje.asset_events[3].total_price/1000000000000000000;
+document.getElementById("prodaja.timestamp3").textContent=outputtr;		 
 document.getElementById("prodaja_token_id4").textContent=prodaje.asset_events[4].asset.token_id;
 document.getElementById("prodaja_image4").src=prodaje.asset_events[4].asset.image_thumbnail_url;
-document.getElementById("prodaja.price4").textContent=prodaje.asset_events[4].total_price/1000000000000000000;		 
+document.getElementById("prodaja.price4").textContent=prodaje.asset_events[4].total_price/1000000000000000000;
+document.getElementById("prodaja.timestamp4").textContent=outputf;
 })
   .catch(err => console.error(err));	
 	
