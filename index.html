@@ -482,10 +482,10 @@ if (differencetr < 60000) {
 		 
 		 
 const differencef = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[4].event_timestamp);
-let outputtr = ``;
+let outputf = ``;
 if (differencef < 60000) {
     // Less than a minute has passed:
-    outputtr = `${differencef} seconds ago`;
+    outputf = `${differencef} seconds ago`;
 } else if (differencef < 3600000) {
     // Less than an hour has passed:
     outputf = `${Math.floor(differencef / 60000)} minutes ago`;
