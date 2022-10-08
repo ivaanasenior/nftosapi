@@ -139,31 +139,31 @@ table.inline {
 	    <tr><td><a id="prodaja_token_id0"></a></td></tr>	
 	    <tr><td><img id="prodaja_image0" width="50" height="50"></td></tr>
 	    <tr><td><a id="prodaja.price0"></a></td></tr>
-            <tr><td><a id="prodaja.timestamp"></td></tr>
+            <tr><td><a id="prodaja.timestamp0"></td></tr>
 	</table>
         <table class="inline">	
 	    <tr><td><a id="prodaja_token_id1"></a></td></tr>	
 	    <tr><td><img id="prodaja_image1"  width="50" height="50"></td></tr>
 	    <tr><td><a id="prodaja.price1"></a></td></tr>
-            <tr><td></td></tr>
+            <tr><td><a id="prodaja.timestamp1"></td></tr>
 	</table>	
 	<table class="inline">
 	    <tr><td><a id="prodaja_token_id2"></a></td></tr>	
 	    <tr><td><img id="prodaja_image2"  width="50" height="50"></td></tr>
 	    <tr><td><a id="prodaja.price2"></a></td></tr>
-            <tr><td></td></tr>	
+            <tr><td><a id="prodaja.timestamp2"></td></tr>
 	</table>	
 	<table class="inline">
 	    <tr><td><a id="prodaja_token_id3"></a></td></tr>		
 	    <tr><td><img id="prodaja_image3"  width="50" height="50"></td></tr>	
 	    <tr><td><a id="prodaja.price3"></a></td></tr>	
-            <tr><td></td></tr>		
+            <tr><td><a id="prodaja.timestamp2"></td></tr>	
 	</table>
 	<table class="inline">	
 	    <tr><td><a id="prodaja_token_id4"></a></td></tr>	
 	    <tr><td><img id="prodaja_image4"  width="50" height="50"></td></tr>
 	    <tr><td><a id="prodaja.price4"></a></td></tr>
-            <tr><td></td></tr>	
+            <tr><td><a id="prodaja.timestamp4"></td></tr>
 	</table>
 		</div> 
 	<table class="styled-table">	
@@ -390,41 +390,87 @@ prodaje = podaci_prodaje;
 
 		 		 
 const difference = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[0].event_timestamp);
-let output = ``;
+let output0 = ``;
 if (difference < 60000) {
     // Less than a minute has passed:
-    output = `${difference} seconds ago`;
+    outputz = `${difference} seconds ago`;
 } else if (difference < 3600000) {
     // Less than an hour has passed:
-    output = `${Math.floor(difference / 60000)} minutes ago`;
+    outputz = `${Math.floor(difference / 60000)} minutes ago`;
 } else if (difference < 86400000) {
     // Less than a day has passed:
-    output = `${Math.floor(difference / 3600000)} hours ago`;
+    outputz = `${Math.floor(difference / 3600000)} hours ago`;
 } else if (difference < 2620800000) {
     // Less than a month has passed:
-    output = `${Math.floor(difference / 86400000)} days ago`;
+    outputz = `${Math.floor(difference / 86400000)} days ago`;
 } else if (difference < 31449600000) {
     // Less than a year has passed:
-    output = `${Math.floor(difference / 2620800000)} months ago`;
+    outputz = `${Math.floor(difference / 2620800000)} months ago`;
 } else {
     // More than a year has passed:
-    output = `${Math.floor(difference / 31449600000)} years ago`;
+    outputz = `${Math.floor(difference / 31449600000)} years ago`;
 }
-console.log(output);			 
+
 		 
+const difference = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[1].event_timestamp);
+let output0 = ``;
+if (difference < 60000) {
+    // Less than a minute has passed:
+    outputo = `${difference} seconds ago`;
+} else if (difference < 3600000) {
+    // Less than an hour has passed:
+    outputo = `${Math.floor(difference / 60000)} minutes ago`;
+} else if (difference < 86400000) {
+    // Less than a day has passed:
+    outputo = `${Math.floor(difference / 3600000)} hours ago`;
+} else if (difference < 2620800000) {
+    // Less than a month has passed:
+    outputo = `${Math.floor(difference / 86400000)} days ago`;
+} else if (difference < 31449600000) {
+    // Less than a year has passed:
+    outputo = `${Math.floor(difference / 2620800000)} months ago`;
+} else {
+    // More than a year has passed:
+    outputo = `${Math.floor(difference / 31449600000)} years ago`;
+}
+		 
+
+const difference = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[2].event_timestamp);
+let output0 = ``;
+if (difference < 60000) {
+    // Less than a minute has passed:
+    outputt = `${difference} seconds ago`;
+} else if (difference < 3600000) {
+    // Less than an hour has passed:
+    outputt = `${Math.floor(difference / 60000)} minutes ago`;
+} else if (difference < 86400000) {
+    // Less than a day has passed:
+    outputt = `${Math.floor(difference / 3600000)} hours ago`;
+} else if (difference < 2620800000) {
+    // Less than a month has passed:
+    outputt = `${Math.floor(difference / 86400000)} days ago`;
+} else if (difference < 31449600000) {
+    // Less than a year has passed:
+    outputt = `${Math.floor(difference / 2620800000)} months ago`;
+} else {
+    // More than a year has passed:
+    outputt = `${Math.floor(difference / 31449600000)} years ago`;
+}		 
 		 
 		 
 		 
 document.getElementById("prodaja_token_id0").textContent=prodaje.asset_events[0].asset.token_id;
 document.getElementById("prodaja_image0").src=prodaje.asset_events[0].asset.image_thumbnail_url;
 document.getElementById("prodaja.price0").textContent=prodaje.asset_events[0].total_price/1000000000000000000;
-document.getElementById("prodaja.timestamp").textContent=output;		 
+document.getElementById("prodaja.timestamp0").textContent=outputz;		 
 document.getElementById("prodaja_token_id1").textContent=prodaje.asset_events[1].asset.token_id;
 document.getElementById("prodaja_image1").src=prodaje.asset_events[1].asset.image_thumbnail_url;
 document.getElementById("prodaja.price1").textContent=prodaje.asset_events[1].total_price/1000000000000000000;
+document.getElementById("prodaja.timestamp1").textContent=outputo;		 
 document.getElementById("prodaja_token_id2").textContent=prodaje.asset_events[2].asset.token_id;
 document.getElementById("prodaja_image2").src=prodaje.asset_events[2].asset.image_thumbnail_url;
 document.getElementById("prodaja.price2").textContent=prodaje.asset_events[2].total_price/1000000000000000000;
+document.getElementById("prodaja.timestamp2").textContent=outputt;
 document.getElementById("prodaja_token_id3").textContent=prodaje.asset_events[3].asset.token_id;
 document.getElementById("prodaja_image3").src=prodaje.asset_events[3].asset.image_thumbnail_url;
 document.getElementById("prodaja.price3").textContent=prodaje.asset_events[3].total_price/1000000000000000000;
