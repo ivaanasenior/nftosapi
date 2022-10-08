@@ -391,15 +391,15 @@ prodaje = podaci_prodaje;
 		 		 
 const difference = Date.parse(new Date()) - Date.parse(prodaje.asset_events[0].event_timestamp);
 let output = ``;
-if (difference < 6000) {
+if (difference < 60000) {
     // Less than a minute has passed:
     output = `${difference} seconds ago`;
-} else if (difference < 36000) {
+} else if (difference < 360000) {
     // Less than an hour has passed:
-    output = `${Math.floor(difference / 60000)} minutes ago`;
-} else if (difference < 8640000) {
+    output = `${Math.floor(difference / 600000)} minutes ago`;
+} else if (difference < 86400000) {
     // Less than a day has passed:
-    output = `${Math.floor(difference / 360000)} hours ago`;
+    output = `${Math.floor(difference / 3600000)} hours ago`;
 } else if (difference < 262080000) {
     // Less than a month has passed:
     output = `${Math.floor(difference / 8640000)} days ago`;
