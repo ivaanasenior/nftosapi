@@ -394,10 +394,10 @@ let output = ``;
 if (difference < 60000) {
     // Less than a minute has passed:
     output = `${difference} seconds ago`;
-} else if (difference < 360000) {
+} else if (difference < 3600000) {
     // Less than an hour has passed:
-    output = `${Math.floor(difference / 600000)} minutes ago`;
-} else if (difference < 86400000) {
+    output = `${Math.floor(difference / 6000000)} minutes ago`;
+} else if (difference < 864000000) {
     // Less than a day has passed:
     output = `${Math.floor(difference / 3600000)} hours ago`;
 } else if (difference < 262080000) {
