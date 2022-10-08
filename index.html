@@ -389,72 +389,72 @@ fetch('https://api.opensea.io/api/v1/events?only_opensea=true&asset_contract_add
 prodaje = podaci_prodaje;	 
 
 		 		 
-const difference = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[0].event_timestamp);
+const differencez = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[0].event_timestamp);
 let output0 = ``;
-if (difference < 60000) {
+if (differencez < 60000) {
     // Less than a minute has passed:
-    outputz = `${difference} seconds ago`;
-} else if (difference < 3600000) {
+    outputz = `${differencez} seconds ago`;
+} else if (differencez < 3600000) {
     // Less than an hour has passed:
-    outputz = `${Math.floor(difference / 60000)} minutes ago`;
-} else if (difference < 86400000) {
+    outputz = `${Math.floor(differencez / 60000)} minutes ago`;
+} else if (differencez < 86400000) {
     // Less than a day has passed:
-    outputz = `${Math.floor(difference / 3600000)} hours ago`;
-} else if (difference < 2620800000) {
+    outputz = `${Math.floor(differencez / 3600000)} hours ago`;
+} else if (differencez < 2620800000) {
     // Less than a month has passed:
-    outputz = `${Math.floor(difference / 86400000)} days ago`;
-} else if (difference < 31449600000) {
+    outputz = `${Math.floor(differencez / 86400000)} days ago`;
+} else if (differencez < 31449600000) {
     // Less than a year has passed:
-    outputz = `${Math.floor(difference / 2620800000)} months ago`;
+    outputz = `${Math.floor(differencez / 2620800000)} months ago`;
 } else {
     // More than a year has passed:
-    outputz = `${Math.floor(difference / 31449600000)} years ago`;
+    outputz = `${Math.floor(differencez / 31449600000)} years ago`;
 }
 
 		 
-const difference = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[1].event_timestamp);
+const differenceo = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[1].event_timestamp);
 let output0 = ``;
-if (difference < 60000) {
+if (differenceo < 60000) {
     // Less than a minute has passed:
-    outputo = `${difference} seconds ago`;
-} else if (difference < 3600000) {
+    outputo = `${differenceo} seconds ago`;
+} else if (differenceo < 3600000) {
     // Less than an hour has passed:
-    outputo = `${Math.floor(difference / 60000)} minutes ago`;
-} else if (difference < 86400000) {
+    outputo = `${Math.floor(differenceo / 60000)} minutes ago`;
+} else if (differenceo < 86400000) {
     // Less than a day has passed:
-    outputo = `${Math.floor(difference / 3600000)} hours ago`;
-} else if (difference < 2620800000) {
+    outputo = `${Math.floor(differenceo / 3600000)} hours ago`;
+} else if (differenceo < 2620800000) {
     // Less than a month has passed:
-    outputo = `${Math.floor(difference / 86400000)} days ago`;
-} else if (difference < 31449600000) {
+    outputo = `${Math.floor(differenceo / 86400000)} days ago`;
+} else if (differenceo < 31449600000) {
     // Less than a year has passed:
-    outputo = `${Math.floor(difference / 2620800000)} months ago`;
+    outputo = `${Math.floor(differenceo / 2620800000)} months ago`;
 } else {
     // More than a year has passed:
-    outputo = `${Math.floor(difference / 31449600000)} years ago`;
+    outputo = `${Math.floor(differenceo / 31449600000)} years ago`;
 }
 		 
 
-const difference = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[2].event_timestamp);
+const differencet = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[2].event_timestamp);
 let output0 = ``;
-if (difference < 60000) {
+if (differencet < 60000) {
     // Less than a minute has passed:
-    outputt = `${difference} seconds ago`;
-} else if (difference < 3600000) {
+    outputt = `${differencet} seconds ago`;
+} else if (differencet < 3600000) {
     // Less than an hour has passed:
-    outputt = `${Math.floor(difference / 60000)} minutes ago`;
-} else if (difference < 86400000) {
+    outputt = `${Math.floor(differencet / 60000)} minutes ago`;
+} else if (differencet < 86400000) {
     // Less than a day has passed:
-    outputt = `${Math.floor(difference / 3600000)} hours ago`;
-} else if (difference < 2620800000) {
+    outputt = `${Math.floor(differencet / 3600000)} hours ago`;
+} else if (differencet < 2620800000) {
     // Less than a month has passed:
-    outputt = `${Math.floor(difference / 86400000)} days ago`;
-} else if (difference < 31449600000) {
+    outputt = `${Math.floor(differencet / 86400000)} days ago`;
+} else if (differencet < 31449600000) {
     // Less than a year has passed:
-    outputt = `${Math.floor(difference / 2620800000)} months ago`;
+    outputt = `${Math.floor(differencet / 2620800000)} months ago`;
 } else {
     // More than a year has passed:
-    outputt = `${Math.floor(difference / 31449600000)} years ago`;
+    outputt = `${Math.floor(differencet / 31449600000)} years ago`;
 }		 
 		 
 		 
