@@ -396,19 +396,19 @@ if (difference < 60000) {
     output = `${difference} seconds ago`;
 } else if (difference < 3600000) {
     // Less than an hour has passed:
-    output = `${Math.floor(difference / 6000000)} minutes ago`;
-} else if (difference < 864000000) {
+    output = `${Math.floor(difference / 60000)} minutes ago`;
+} else if (difference < 86400000) {
     // Less than a day has passed:
     output = `${Math.floor(difference / 3600000)} hours ago`;
-} else if (difference < 262080000) {
+} else if (difference < 2620800000) {
     // Less than a month has passed:
-    output = `${Math.floor(difference / 8640000)} days ago`;
-} else if (difference < 3144960000) {
+    output = `${Math.floor(difference / 86400000)} days ago`;
+} else if (difference < 31449600000) {
     // Less than a year has passed:
-    output = `${Math.floor(difference / 262080000)} months ago`;
+    output = `${Math.floor(difference / 2620800000)} months ago`;
 } else {
     // More than a year has passed:
-    output = `${Math.floor(difference / 3144960000)} years ago`;
+    output = `${Math.floor(difference / 31449600000)} years ago`;
 }
 console.log(output);			 
 		 
