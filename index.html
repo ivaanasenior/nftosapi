@@ -388,10 +388,8 @@ fetch('https://api.opensea.io/api/v1/events?only_opensea=true&asset_contract_add
   .then(data => {let podaci_prodaje = data;
 prodaje = podaci_prodaje;	 
 
-		 
-const timestamp = Date.parse(new Date());
-const oldtimestamp = Date.parse(prodaje.asset_events[0].event_timestamp);		 
-const difference = timestamp - oldtimestamp;
+		 		 
+const difference = Date.parse(new Date()) - Date.parse(prodaje.asset_events[0].event_timestamp);
 let output = ``;
 if (difference < 60) {
     // Less than a minute has passed:
