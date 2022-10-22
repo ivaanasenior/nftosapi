@@ -627,14 +627,14 @@ document.getElementById("prodaja.timestamp4").textContent=outputf;
 	
 	
 	
-const options_prodaje = {method: 'GET',headers: {accept: 'application/json', 'X-API-KEY': 'bcc09c72f00646b7a4724bb0c11afc18'}};
-fetch('https://api.opensea.io/api/v1/events?only_opensea=true&asset_contract_address=0x49907029e80dE1cBB3A46fD44247BF8BA8B5f12F&event_type=successful', options_prodaje)
+const options_prodajemtg = {method: 'GET',headers: {accept: 'application/json', 'X-API-KEY': 'bcc09c72f00646b7a4724bb0c11afc18'}};
+fetch('https://api.opensea.io/api/v1/events?only_opensea=true&asset_contract_address=0x49907029e80dE1cBB3A46fD44247BF8BA8B5f12F&event_type=successful', options_prodajemtg)
   .then(response => response.json())
-  .then(data => {let podaci_prodaje = data;
-prodaje = podaci_prodaje;	 
+  .then(data => {let podaci_prodajemtg = data;
+prodajemtg = podaci_prodajemtg;	 
 
 		 		 
-const differencezmtg = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[0].event_timestamp);
+const differencezmtg = -7200000 + Date.parse(new Date()) - Date.parse(prodajemtg.asset_events[0].event_timestamp);
 let outputzmtg = ``;
 if (differencezmtg < 60000) {
     // Less than a minute has passed:
@@ -657,7 +657,7 @@ if (differencezmtg < 60000) {
 }
 
 		 
-const differenceomtg = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[1].event_timestamp);
+const differenceomtg = -7200000 + Date.parse(new Date()) - Date.parse(prodajemtg.asset_events[1].event_timestamp);
 let outputomtg = ``;
 if (differenceomtg < 60000) {
     // Less than a minute has passed:
@@ -680,7 +680,7 @@ if (differenceomtg < 60000) {
 }
 		 
 
-const differencetmtg = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[2].event_timestamp);
+const differencetmtg = -7200000 + Date.parse(new Date()) - Date.parse(prodajemtg.asset_events[2].event_timestamp);
 let outputtmtg = ``;
 if (differencetmtg < 60000) {
     // Less than a minute has passed:
@@ -703,7 +703,7 @@ if (differencetmtg < 60000) {
 }		 
 		 
 
-const differencetrmtg = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[3].event_timestamp);
+const differencetrmtg = -7200000 + Date.parse(new Date()) - Date.parse(prodajemtg.asset_events[3].event_timestamp);
 let outputtrmtg = ``;
 if (differencetrmtg < 60000) {
     // Less than a minute has passed:
@@ -726,7 +726,7 @@ if (differencetrmtg < 60000) {
 }		 
 		 
 		 
-const differencefmtg = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[4].event_timestamp);
+const differencefmtg = -7200000 + Date.parse(new Date()) - Date.parse(prodajemtg.asset_events[4].event_timestamp);
 let outputfmtg = ``;
 if (differencefmtg < 60000) {
     // Less than a minute has passed:
@@ -753,25 +753,25 @@ if (differencefmtg < 60000) {
 		 
 		 
 		 
-document.getElementById("prodajamtg_token_id0").textContent=prodaje.asset_events[0].asset.token_id;
-document.getElementById("prodajamtg_image0").src=prodaje.asset_events[0].asset.image_thumbnail_url;
-document.getElementById("prodajamtg.price0").textContent=prodaje.asset_events[0].total_price/1000000000000000000;
+document.getElementById("prodajamtg_token_id0").textContent=prodajemtg.asset_events[0].asset.token_id;
+document.getElementById("prodajamtg_image0").src=prodajemtg.asset_events[0].asset.image_thumbnail_url;
+document.getElementById("prodajamtg.price0").textContent=prodajemtg.asset_events[0].total_price/1000000000000000000;
 document.getElementById("prodajamtg.timestamp0").textContent=outputzmtg;		 
-document.getElementById("prodajamtg_token_id1").textContent=prodaje.asset_events[1].asset.token_id;
-document.getElementById("prodajamtg_image1").src=prodaje.asset_events[1].asset.image_thumbnail_url;
-document.getElementById("prodajamtg.price1").textContent=prodaje.asset_events[1].total_price/1000000000000000000;
+document.getElementById("prodajamtg_token_id1").textContent=prodajemtg.asset_events[1].asset.token_id;
+document.getElementById("prodajamtg_image1").src=prodajemtg.asset_events[1].asset.image_thumbnail_url;
+document.getElementById("prodajamtg.price1").textContent=prodajemtg.asset_events[1].total_price/1000000000000000000;
 document.getElementById("prodajamtg.timestamp1").textContent=outputomtg;		 
-document.getElementById("prodajamtg_token_id2").textContent=prodaje.asset_events[2].asset.token_id;
-document.getElementById("prodajamtg_image2").src=prodaje.asset_events[2].asset.image_thumbnail_url;
-document.getElementById("prodajamtg.price2").textContent=prodaje.asset_events[2].total_price/1000000000000000000;
+document.getElementById("prodajamtg_token_id2").textContent=prodajemtg.asset_events[2].asset.token_id;
+document.getElementById("prodajamtg_image2").src=prodajemtg.asset_events[2].asset.image_thumbnail_url;
+document.getElementById("prodajamtg.price2").textContent=prodajemtg.asset_events[2].total_price/1000000000000000000;
 document.getElementById("prodajamtg.timestamp2").textContent=outputtmtg;
-document.getElementById("prodajamtg_token_id3").textContent=prodaje.asset_events[3].asset.token_id;
-document.getElementById("prodajamtg_image3").src=prodaje.asset_events[3].asset.image_thumbnail_url;
-document.getElementById("pprodajamtg.price3").textContent=prodaje.asset_events[3].total_price/1000000000000000000;
+document.getElementById("prodajamtg_token_id3").textContent=prodajemtg.asset_events[3].asset.token_id;
+document.getElementById("prodajamtg_image3").src=prodajemtg.asset_events[3].asset.image_thumbnail_url;
+document.getElementById("pprodajamtg.price3").textContent=prodajemtg.asset_events[3].total_price/1000000000000000000;
 document.getElementById("pprodajamtg.timestamp3").textContent=outputtrmtg;		 
-document.getElementById("prodajamtg_token_id4").textContent=prodaje.asset_events[4].asset.token_id;
-document.getElementById("prodajamtg_image4").src=prodaje.asset_events[4].asset.image_thumbnail_url;
-document.getElementById("pprodajamtg.price4").textContent=prodaje.asset_events[4].total_price/1000000000000000000;
+document.getElementById("prodajamtg_token_id4").textContent=prodajemtg.asset_events[4].asset.token_id;
+document.getElementById("prodajamtg_image4").src=prodajemtg.asset_events[4].asset.image_thumbnail_url;
+document.getElementById("pprodajamtg.price4").textContent=prodajemtg.asset_events[4].total_price/1000000000000000000;
 document.getElementById("prodajamtg.timestamp4").textContent=outputfmtg;
 })
   .catch(err => console.error(err));		
