@@ -129,15 +129,14 @@ table.inline {
 <table class="styled-table">
     <tbody>
          <tr onclick="window.location='https://opensea.io/collection/the-plague?search[sortAscending]=true&search[sortBy]=PRICE&search[toggles][0]=BUY_NOW';">
-            <td>
+            	<td>
 		<img src="https://lh3.googleusercontent.com/izJoLNVOJnj7W7GW_hdg8pwOTohxgJ9Z2w1E8iZdAWd2NXkqQWxKY2FCOaWPvNzixyQ0kV6RcwSajYVocPzwtANaV5nQETvGwMNb_g=s130" width="55" height="55">
 		</td>
-	    <td><h2 id="floor_price_tp"></h2></td>
-	    <td>1d</br><a id="one_day_sales_tp"></a></td>
-            <td>7d</br><a id="seven_day_sales_tp"></a></td>
-	    
+		<td><h2 id="floor_price_tp"></h2></td>
+		<td>1d</br><a id="one_day_sales_tp"></a></td>
+         	<td>7d</br><a id="seven_day_sales_tp"></a></td> 
         </tr>
-	</table>
+</table>
 	<div class="prodaje">  
 	<table class="inline">
 	    <tr><td><a id="prodaja_token_id0"></a></td></tr>	
@@ -198,6 +197,85 @@ table.inline {
             <td><a id="seven_day_sales_xoxo"></a></td>
 	   
         </tr>  
+		
+	
+		
+		
+		
+		
+	<table class="styled-table">
+    <tbody>
+         <tr onclick="window.location='https://opensea.io/collection/morethangamersnftmtg?search[sortAscending]=true&search[sortBy]=PRICE&search[toggles][0]=BUY_NOW';">
+            	<td>
+		<img src="https://lh3.googleusercontent.com/NKIm3YiJegP-njvy3m6Fwq7MvGmIvHCngCeY_TwFaM01AxFUO9OESvwH6JNRiNIdwitaswS65gQmQk-uiJhZ2zi2m274wVvUaOk7-g=s130" width="55" height="55">
+		</td>
+		<td><h2 id="floor_price_tp"></h2></td>
+		<td>1d</br><a id="one_day_sales_tp"></a></td>
+         	<td>7d</br><a id="seven_day_sales_tp"></a></td> 
+        </tr>
+</table>
+<div class="prodaje">  
+	<table class="inline">
+	    <tr><td><a id="prodajamtg_token_id0"></a></td></tr>	
+	    <tr><td><img id="rodajamtg_image0" width="50" height="50"></td></tr>
+	    <tr><td><a id="rodajamtg.price0"></a></td></tr>
+            <tr><td><a id="rodajamtg.timestamp0"></td></tr>
+	</table>
+        <table class="inline">	
+	    <tr><td><a id="rodajamtg_token_id1"></a></td></tr>	
+	    <tr><td><img id="prodajamtg_image1"  width="50" height="50"></td></tr>
+	    <tr><td><a id="rodajamtg.price1"></a></td></tr>
+            <tr><td><a id="rodajamtg.timestamp1"></td></tr>
+	</table>	
+	<table class="inline">
+	    <tr><td><a id="rodajamtg_token_id2"></a></td></tr>	
+	    <tr><td><img id="rodajamtg_image2"  width="50" height="50"></td></tr>
+	    <tr><td><a id="prodajamtg.price2"></a></td></tr>
+            <tr><td><a id="rodajamtg.timestamp2"></td></tr>
+	</table>	
+	<table class="inline">
+	    <tr><td><a id="rodajamtg_token_id3"></a></td></tr>		
+	    <tr><td><img id="rodajamtg_image3"  width="50" height="50"></td></tr>	
+	    <tr><td><a id="prodajamtg.price3"></a></td></tr>	
+            <tr><td><a id="rodajamtg.timestamp3"></td></tr>	
+	</table>
+	<table class="inline">	
+	    <tr><td><a id="rodajamtg_token_id4"></a></td></tr>	
+	    <tr><td><img id="rodajamtg_image4"  width="50" height="50"></td></tr>
+	    <tr><td><a id="rodajamtg.price4"></a></td></tr>
+            <tr><td><a id="rodajamtg.timestamp4"></td></tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<tr onclick="window.location='https://opensea.io/collection/morethangamersnftmtg?search[sortBy]=PRICE&search[sortAscending]=true&search[toggles][0]=BUY_NOW';">
             <td>
 		<img src="https://lh3.googleusercontent.com/NKIm3YiJegP-njvy3m6Fwq7MvGmIvHCngCeY_TwFaM01AxFUO9OESvwH6JNRiNIdwitaswS65gQmQk-uiJhZ2zi2m274wVvUaOk7-g=s130" width="55" height="55">
@@ -536,6 +614,177 @@ document.getElementById("prodaja.timestamp4").textContent=outputf;
   .catch(err => console.error(err));	
 	
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+const options_prodaje = {method: 'GET',headers: {accept: 'application/json', 'X-API-KEY': 'bcc09c72f00646b7a4724bb0c11afc18'}};
+fetch('https://api.opensea.io/api/v1/events?only_opensea=true&asset_contract_address=0x49907029e80dE1cBB3A46fD44247BF8BA8B5f12F&event_type=successful', options_prodaje)
+  .then(response => response.json())
+  .then(data => {let podaci_prodaje = data;
+prodaje = podaci_prodaje;	 
+
+		 		 
+const differencezmtg = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[0].event_timestamp);
+let outputzmtg = ``;
+if (differencezmtg < 60000) {
+    // Less than a minute has passed:
+    outputzmtg = `${differencezmtg} seconds ago`;
+} else if (differencezmtg < 3600000) {
+    // Less than an hour has passed:
+    outputzmtg = `${Math.floor(differencezmtg / 60000)} minutes ago`;
+} else if (differencezmtg < 86400000) {
+    // Less than a day has passed:
+    outputzmtg = `${Math.floor(differencezmtg / 3600000)} hours ago`;
+} else if (differencezmtg < 2620800000) {
+    // Less than a month has passed:
+    outputzmtg = `${Math.floor(differencezmtg / 86400000)} days ago`;
+} else if (differencezmtg < 31449600000) {
+    // Less than a year has passed:
+    outputzmtg = `${Math.floor(differencezmtg / 2620800000)} months ago`;
+} else {
+    // More than a year has passed:
+    outputzmtg = `${Math.floor(differencezmtg / 31449600000)} years ago`;
+}
+
+		 
+const differenceomtg = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[1].event_timestamp);
+let outputomtg = ``;
+if (differenceomtg < 60000) {
+    // Less than a minute has passed:
+    outputomtg = `${differenceomtg} seconds ago`;
+} else if (differenceomtg < 3600000) {
+    // Less than an hour has passed:
+    outputomtg = `${Math.floor(differenceomtg / 60000)} minutes ago`;
+} else if (differenceomtg < 86400000) {
+    // Less than a day has passed:
+    outputomtg = `${Math.floor(differenceomtg / 3600000)} hours ago`;
+} else if (differenceomtg < 2620800000) {
+    // Less than a month has passed:
+    outputomtg = `${Math.floor(differenceomtg / 86400000)} days ago`;
+} else if (differenceomtg < 31449600000) {
+    // Less than a year has passed:
+    outputomtg = `${Math.floor(differenceomtg / 2620800000)} months ago`;
+} else {
+    // More than a year has passed:
+    outputomtg = `${Math.floor(differenceomtg / 31449600000)} years ago`;
+}
+		 
+
+const differencetmtg = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[2].event_timestamp);
+let outputtmtg = ``;
+if (differencetmtg < 60000) {
+    // Less than a minute has passed:
+    outputtmtg = `${differencetmtg} seconds ago`;
+} else if (differencetmtg < 3600000) {
+    // Less than an hour has passed:
+    outputtmtg = `${Math.floor(differencetmtg / 60000)} minutes ago`;
+} else if (differencetmtg < 86400000) {
+    // Less than a day has passed:
+    outputtmtg = `${Math.floor(differencetmtg / 3600000)} hours ago`;
+} else if (differencetmtg < 2620800000) {
+    // Less than a month has passed:
+    outputtmtg = `${Math.floor(differencetmtg / 86400000)} days ago`;
+} else if (differencetmtg < 31449600000) {
+    // Less than a year has passed:
+    outputtmtg = `${Math.floor(differencetmtg / 2620800000)} months ago`;
+} else {
+    // More than a year has passed:
+    outputtmtg = `${Math.floor(differencetmtg / 31449600000)} years ago`;
+}		 
+		 
+
+const differencetrmtg = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[3].event_timestamp);
+let outputtrmtg = ``;
+if (differencetrmtg < 60000) {
+    // Less than a minute has passed:
+    outputtrmtg = `${differencetrmtg} seconds ago`;
+} else if (differencetrmtg < 3600000) {
+    // Less than an hour has passed:
+    outputtrmtg = `${Math.floor(differencetrmtg / 60000)} minutes ago`;
+} else if (differencetrmtg < 86400000) {
+    // Less than a day has passed:
+    outputtrmtg = `${Math.floor(differencetrmtg / 3600000)} hours ago`;
+} else if (differencetrmtg < 2620800000) {
+    // Less than a month has passed:
+    outputtrmtg = `${Math.floor(differencetrmtg / 86400000)} days ago`;
+} else if (differencetrmtg < 31449600000) {
+    // Less than a year has passed:
+    outputtrmtg = `${Math.floor(differencetrmtg / 2620800000)} months ago`;
+} else {
+    // More than a year has passed:
+    outputtrmtg = `${Math.floor(differencetrmtg / 31449600000)} years ago`;
+}		 
+		 
+		 
+const differencefmtg = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[4].event_timestamp);
+let outputfmtg = ``;
+if (differencefmtg < 60000) {
+    // Less than a minute has passed:
+    outputfmtg = `${differencefmtg} seconds ago`;
+} else if (differencefmtg < 3600000) {
+    // Less than an hour has passed:
+    outputfmtg = `${Math.floor(differencefmtg / 60000)} minutes ago`;
+} else if (differencefmtg < 86400000) {
+    // Less than a day has passed:
+    outputfmtg = `${Math.floor(differencefmtg / 3600000)} hours ago`;
+} else if (differencefmtg < 2620800000) {
+    // Less than a month has passed:
+    outputfmtg = `${Math.floor(differencefmtg / 86400000)} days ago`;
+} else if (differencetrmtg < 31449600000) {
+    // Less than a year has passed:
+    outputfmtg = `${Math.floor(differencefmtg / 2620800000)} months ago`;
+} else {
+    // More than a year has passed:
+    outputfmtg = `${Math.floor(differencefmtg / 31449600000)} years ago`;
+}
+		 
+		 
+		 
+		 
+		 
+		 
+document.getElementById("prodajamtg_token_id0").textContent=prodaje.asset_events[0].asset.token_id;
+document.getElementById("prodajamtg_image0").src=prodaje.asset_events[0].asset.image_thumbnail_url;
+document.getElementById("prodajamtg.price0").textContent=prodaje.asset_events[0].total_price/1000000000000000000;
+document.getElementById("prodajamtg.timestamp0").textContent=outputzmtg;		 
+document.getElementById("prodajamtg_token_id1").textContent=prodaje.asset_events[1].asset.token_id;
+document.getElementById("prodajamtg_image1").src=prodaje.asset_events[1].asset.image_thumbnail_url;
+document.getElementById("prodajamtg.price1").textContent=prodaje.asset_events[1].total_price/1000000000000000000;
+document.getElementById("prodajamtg.timestamp1").textContent=outputomtg;		 
+document.getElementById("prodajamtg_token_id2").textContent=prodaje.asset_events[2].asset.token_id;
+document.getElementById("prodajamtg_image2").src=prodaje.asset_events[2].asset.image_thumbnail_url;
+document.getElementById("prodajamtg.price2").textContent=prodaje.asset_events[2].total_price/1000000000000000000;
+document.getElementById("prodajamtg.timestamp2").textContent=outputtmtg;
+document.getElementById("prodajamtg_token_id3").textContent=prodaje.asset_events[3].asset.token_id;
+document.getElementById("prodajamtg_image3").src=prodaje.asset_events[3].asset.image_thumbnail_url;
+document.getElementById("pprodajamtg.price3").textContent=prodaje.asset_events[3].total_price/1000000000000000000;
+document.getElementById("pprodajamtg.timestamp3").textContent=outputtrmtg;		 
+document.getElementById("prodajamtg_token_id4").textContent=prodaje.asset_events[4].asset.token_id;
+document.getElementById("prodajamtg_image4").src=prodaje.asset_events[4].asset.image_thumbnail_url;
+document.getElementById("pprodajamtg.price4").textContent=prodaje.asset_events[4].total_price/1000000000000000000;
+document.getElementById("prodajamtg.timestamp4").textContent=outputfmtg;
+})
+  .catch(err => console.error(err));		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 </script>
 	</body>
