@@ -733,11 +733,11 @@ document.getElementById("prodajamtg.price2").textContent=prodajemtg.asset_events
 document.getElementById("prodajamtg.timestamp2").textContent=outputtmtg;
 document.getElementById("prodajamtg_token_id3").textContent=prodajemtg.asset_events[3].asset.token_id;
 document.getElementById("prodajamtg_image3").src=prodajemtg.asset_events[3].asset.image_thumbnail_url;
-document.getElementById("pprodajamtg.price3").textContent=prodajemtg.asset_events[3].total_price/1000000000000000000;
-document.getElementById("pprodajamtg.timestamp3").textContent=outputtrmtg;		 
+document.getElementById("prodajamtg.price3").textContent=prodajemtg.asset_events[3].total_price/1000000000000000000;
+document.getElementById("prodajamtg.timestamp3").textContent=outputtrmtg;		 
 document.getElementById("prodajamtg_token_id4").textContent=prodajemtg.asset_events[4].asset.token_id;
 document.getElementById("prodajamtg_image4").src=prodajemtg.asset_events[4].asset.image_thumbnail_url;
-document.getElementById("pprodajamtg.price4").textContent=prodajemtg.asset_events[4].total_price/1000000000000000000;
+document.getElementById("prodajamtg.price4").textContent=prodajemtg.asset_events[4].total_price/1000000000000000000;
 document.getElementById("prodajamtg.timestamp4").textContent=outputfmtg;
 })
   .catch(err => console.error(err));		
