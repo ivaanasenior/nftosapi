@@ -460,7 +460,7 @@ if (differencez < 60000) {
 }
 
 		 
-const differenceo = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[1].event_timestamp);
+const differenceo = Date.parse(new Date()) - Date.parse(prodaje.asset_events[1].event_timestamp);
 let outputo = ``;
 if (differenceo < 60000) {
     // Less than a minute has passed:
@@ -483,7 +483,7 @@ if (differenceo < 60000) {
 }
 		 
 
-const differencet = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[2].event_timestamp);
+const differencet = Date.parse(new Date()) - Date.parse(prodaje.asset_events[2].event_timestamp);
 let outputt = ``;
 if (differencet < 60000) {
     // Less than a minute has passed:
@@ -506,7 +506,7 @@ if (differencet < 60000) {
 }		 
 		 
 
-const differencetr = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[3].event_timestamp);
+const differencetr = Date.parse(new Date()) - Date.parse(prodaje.asset_events[3].event_timestamp);
 let outputtr = ``;
 if (differencetr < 60000) {
     // Less than a minute has passed:
@@ -529,7 +529,7 @@ if (differencetr < 60000) {
 }		 
 		 
 		 
-const differencef = -7200000 + Date.parse(new Date()) - Date.parse(prodaje.asset_events[4].event_timestamp);
+const differencef = Date.parse(new Date()) - Date.parse(prodaje.asset_events[4].event_timestamp);
 let outputf = ``;
 if (differencef < 60000) {
     // Less than a minute has passed:
@@ -600,7 +600,7 @@ fetch('https://api.opensea.io/api/v1/events?only_opensea=true&asset_contract_add
 prodajemtg = podaci_prodajemtg;	 
 
 		 		 
-const differencezmtg = -7200000 + Date.parse(new Date()) - Date.parse(prodajemtg.asset_events[0].event_timestamp);
+const differencezmtg = Date.parse(new Date()) - Date.parse(prodajemtg.asset_events[0].event_timestamp);
 let outputzmtg = ``;
 if (differencezmtg < 60000) {
     // Less than a minute has passed:
@@ -623,7 +623,7 @@ if (differencezmtg < 60000) {
 }
 
 		 
-const differenceomtg = -7200000 + Date.parse(new Date()) - Date.parse(prodajemtg.asset_events[1].event_timestamp);
+const differenceomtg = Date.parse(new Date()) - Date.parse(prodajemtg.asset_events[1].event_timestamp);
 let outputomtg = ``;
 if (differenceomtg < 60000) {
     // Less than a minute has passed:
@@ -646,7 +646,7 @@ if (differenceomtg < 60000) {
 }
 		 
 
-const differencetmtg = -7200000 + Date.parse(new Date()) - Date.parse(prodajemtg.asset_events[2].event_timestamp);
+const differencetmtg = Date.parse(new Date()) - Date.parse(prodajemtg.asset_events[2].event_timestamp);
 let outputtmtg = ``;
 if (differencetmtg < 60000) {
     // Less than a minute has passed:
@@ -669,7 +669,7 @@ if (differencetmtg < 60000) {
 }		 
 		 
 
-const differencetrmtg = -7200000 + Date.parse(new Date()) - Date.parse(prodajemtg.asset_events[3].event_timestamp);
+const differencetrmtg = Date.parse(new Date()) - Date.parse(prodajemtg.asset_events[3].event_timestamp);
 let outputtrmtg = ``;
 if (differencetrmtg < 60000) {
     // Less than a minute has passed:
@@ -692,7 +692,7 @@ if (differencetrmtg < 60000) {
 }		 
 		 
 		 
-const differencefmtg = -7200000 + Date.parse(new Date()) - Date.parse(prodajemtg.asset_events[4].event_timestamp);
+const differencefmtg = Date.parse(new Date()) - Date.parse(prodajemtg.asset_events[4].event_timestamp);
 let outputfmtg = ``;
 if (differencefmtg < 60000) {
     // Less than a minute has passed:
