@@ -604,8 +604,7 @@ const differencezmtg = -7200000 + Date.parse(new Date()) - Date.parse(prodajemtg
 let outputzmtg = ``;
 if (differencezmtg < 60000) {
     // Less than a minute has passed:
-   differencezmtgs = differencezmtg + 720000;
-    outputzmtg = `${differencezmtgs} seconds ago`;
+    outputzmtg = `${differencezmtg} seconds ago`;
 } else if (differencezmtg < 3600000) {
     // Less than an hour has passed:
     outputzmtg = `${Math.floor(differencezmtg / 60000)} minutes ago`;
