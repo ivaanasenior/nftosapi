@@ -427,9 +427,6 @@ document.getElementById("one_day_sales_mojaadresa").textContent = mojestanje.toF
 })
   .catch(err => console.error(err));
 	
-
-	
-	
 	
 const options_prodaje = {method: 'GET',headers: {accept: 'application/json', 'X-API-KEY': 'bcc09c72f00646b7a4724bb0c11afc18'}};
 fetch('https://api.opensea.io/api/v1/events?only_opensea=true&asset_contract_address=0x8c3FB10693B228E8b976FF33cE88f97Ce2EA9563&event_type=successful', options_prodaje)
@@ -555,9 +552,6 @@ if (differencef < 60000) {
 		 
 		 
 		 
-		 
-		 
-		 
 document.getElementById("prodaja_token_id0").textContent=prodaje.asset_events[0].asset.token_id;
 document.getElementById("prodaja_image0").src=prodaje.asset_events[0].asset.image_thumbnail_url;
 document.getElementById("prodaja.price0").textContent=prodaje.asset_events[0].total_price/1000000000000000000;
@@ -582,18 +576,6 @@ document.getElementById("prodaja.timestamp4").textContent=outputf;
   .catch(err => console.error(err));	
 	
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 const options_prodajemtg = {method: 'GET',headers: {accept: 'application/json', 'X-API-KEY': 'bcc09c72f00646b7a4724bb0c11afc18'}};
 fetch('https://api.opensea.io/api/v1/events?only_opensea=true&asset_contract_address=0x49907029e80dE1cBB3A46fD44247BF8BA8B5f12F&event_type=successful', options_prodajemtg)
@@ -716,10 +698,7 @@ if (differencefmtg < 60000) {
     outputfmtg = `${Math.floor(differencefmtg / 31449600000)} years ago`;
 }
 		 
-		 
-		 
-		 
-		 
+	 
 		 
 document.getElementById("prodajamtg_token_id0").textContent=prodajemtg.asset_events[0].asset.token_id;
 document.getElementById("prodajamtg_image0").src=prodajemtg.asset_events[0].asset.image_thumbnail_url;
@@ -743,14 +722,6 @@ document.getElementById("prodajamtg.price4").textContent=prodajemtg.asset_events
 document.getElementById("prodajamtg.timestamp4").textContent=outputfmtg;
 })
   .catch(err => console.error(err));		
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
