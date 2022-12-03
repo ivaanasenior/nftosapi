@@ -338,7 +338,7 @@ const options_mojarb = {method: 'GET', headers: {Accept: 'application/json'}};
 fetch('https://api.arbiscan.io/api?module=account&action=balancemulti&address=0x62FFEFD4F48ae27F04233Ee053f676e2F772837b', options_mojarb)
   .then(response => response.json())
   .then(data => {let podaci_mojarb = data;
-  let mojestanjearba = podaci_mojarb.balance/1000000000000000000;  		 
+  let mojestanjearba = podaci_mojarb.result.balance/1000000000000000000;  		 
 document.getElementById("one_day_sales_mojarb").textContent = mojestanjearba.toFixed(3); 
 })
   .catch(err => console.error(err));	 
