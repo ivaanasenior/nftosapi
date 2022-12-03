@@ -335,7 +335,7 @@ document.getElementById("one_day_sales_mojaadresa").textContent = mojestanje.toF
   .catch(err => console.error(err));
 	
 const options_mojarb = {method: 'GET', headers: {Accept: 'application/json'}};
-fetch('https://api.arbiscan.io/api?module=account&action=balancemulti&address=0x62FFEFD4F48ae27F04233Ee053f676e2F772837b&tag=latest&apikey=YourApiKeyToken', options_mojarb)
+fetch('https://api.arbiscan.io/api?module=account&action=balancemulti&address=0x62FFEFD4F48ae27F04233Ee053f676e2F772837b', options_mojarb)
   .then(response => response.json())
   .then(data => {let podaci_mojaarb = data;
   let mojestanjearba = podaci_mojarb.result/1000000000000000000;  		 
