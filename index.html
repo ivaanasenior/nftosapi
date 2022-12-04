@@ -185,6 +185,32 @@ table.inline {
 	    	<td><a id="one_day_sales_up"></a></td>
             	<td><a id="seven_day_sales_up"></a></td>
         </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 	<tr onclick="window.location='https://opensea.io/collection/arbitrum-odyssey-nft?search[sortAscending]=true&search[sortBy]=PRICE&search[toggles][0]=BUY_NOW';">
+            <td>
+		<img src="https://i.seadn.io/gcs/files/5f68e66f7245d52a89cb1facbc0cdddf.webp?auto=format&w=1920" width="55" height="55">
+		</td>
+	    	<td><h2 id="floor_price_odyssey"></h2></td>
+	    	<td><a id="one_day_sales_odyssey"></a></td>
+            	<td><a id="seven_day_sales_odyssey"></a></td>
+        </tr> 
 	 <tr onclick="window.location='https://opensea.io/collection/xoxonft?search[sortAscending]=true&search[sortBy]=PRICE&search[toggles][0]=BUY_NOW';">
             <td>
 		<img src="https://openseauserdata.com/files/6da02ea9ba0feb28567e40ace1b390b2.gif" width="55" height="55">
@@ -333,6 +359,17 @@ document.getElementById("one_day_sales_seals").textContent = podaci_seals.stats.
 document.getElementById("seven_day_sales_seals").textContent = podaci_seals.stats.seven_day_sales; 
 })
   .catch(err => console.error(err));	
+	
+const options_odyssey = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch('https://api.opensea.io/api/v1/collection/sappy-seals/stats', options_odyssey)
+  .then(response => response.json())
+  .then(data => {let podaci_odyssey = data;
+odyssey_fp = podaci_odyssey.stats.floor_price.toFixed(3);		 
+document.getElementById("floor_price_odyssey").textContent = odyssey_fp; 
+document.getElementById("one_day_sales_odyssey").textContent = podaci_odyssey.stats.one_day_sales; 
+document.getElementById("seven_day_sales_odyssey").textContent = podaci_odyssey.stats.seven_day_sales; 
+})
+  .catch(err => console.error(err));
 	
 	
 const options_mojaadresa = {method: 'GET', headers: {Accept: 'application/json'}};
