@@ -233,7 +233,15 @@ table.inline {
 	    	<td><h2 id="floor_price_alienfrens"></h2></td>
 	    	<td><a id="one_day_sales_alienfrens"></a></td>
             	<td><a id="seven_day_sales_alienfrens"></a></td> 
-	</tr>	 
+	</tr>
+	<tr onclick="window.location='https://opensea.io/collection/wonderpals?search[sortAscending]=true&search[sortBy]=UNIT_PRICE&search[toggles][0]=BUY_NOW';">    
+	 <td>
+		<img src="https://i.seadn.io/gae/DA_iUjt7S9PdmAANh0aqMkxYVhvGogTuKbMSzFO3uEnbvRRt5hn1B8DuN50HQpkRtH34QX7EOYYKIayz1q5KgZWfgLedNo7xBQzK?auto=format&w=256" width="55" height="55">
+		</td>
+	    	<td><h2 id="floor_price_wonderpals"></h2></td>
+	    	<td><a id="one_day_sales_wonderpals"></a></td>
+            	<td><a id="seven_day_sales_wonderpals"></a></td> 
+	</tr>
     </tbody>
 </table>
 
@@ -370,6 +378,17 @@ odyssey_fp = podaci_odyssey.stats.floor_price.toFixed(4);
 document.getElementById("floor_price_odyssey").textContent = odyssey_fp; 
 document.getElementById("one_day_sales_odyssey").textContent = podaci_odyssey.stats.one_day_sales; 
 document.getElementById("seven_day_sales_odyssey").textContent = podaci_odyssey.stats.seven_day_sales; 
+})
+  .catch(err => console.error(err));
+	
+const options_wonderpals = {method: 'GET', headers: {Accept: 'application/json'}};
+fetch('https://api.opensea.io/api/v1/collection/wonderpals/stats', options_wonderpals)
+  .then(response => response.json())
+  .then(data => {let podaci_wonderpals = data;
+wonderpals_fp = podaci_wonderpals.stats.floor_price.toFixed(4);		 
+document.getElementById("floor_price_wonderpals").textContent = wonderpals_fp; 
+document.getElementById("one_day_sales_wonderpals").textContent = podaci_wonderpals.stats.one_day_sales; 
+document.getElementById("seven_day_sales_wonderpals").textContent = podaci_wonderpals.stats.seven_day_sales; 
 })
   .catch(err => console.error(err));
 	
