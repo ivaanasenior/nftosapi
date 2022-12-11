@@ -370,7 +370,7 @@ const options_odyssey = {method: 'GET', headers: {Accept: 'application/json'}};
 fetch('https://api.opensea.io/api/v1/collection/arbitrum-odyssey-nft/stats', options_odyssey)
   .then(response => response.json())
   .then(data => {let podaci_odyssey = data;
-odyssey_fp = podaci_odyssey.stats.floor_price.toFixed(4);		 
+odyssey_fp = podaci_odyssey.stats.floor_price.toFixed(3);		 
 document.getElementById("floor_price_odyssey").textContent = odyssey_fp; 
 document.getElementById("one_day_sales_odyssey").textContent = podaci_odyssey.stats.one_day_sales; 
 document.getElementById("seven_day_sales_odyssey").textContent = podaci_odyssey.stats.seven_day_sales; 
@@ -381,7 +381,7 @@ const options_wonderpals = {method: 'GET', headers: {Accept: 'application/json'}
 fetch('https://api.opensea.io/api/v1/collection/wonderpals/stats', options_wonderpals)
   .then(response => response.json())
   .then(data => {let podaci_wonderpals = data;
-wonderpals_fp = podaci_wonderpals.stats.floor_price.toFixed(4);		 
+wonderpals_fp = podaci_wonderpals.stats.floor_price.toFixed(3);		 
 document.getElementById("floor_price_wonderpals").textContent = wonderpals_fp; 
 document.getElementById("one_day_sales_wonderpals").textContent = podaci_wonderpals.stats.one_day_sales; 
 document.getElementById("seven_day_sales_wonderpals").textContent = podaci_wonderpals.stats.seven_day_sales; 
