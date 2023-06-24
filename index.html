@@ -419,8 +419,15 @@ document.getElementById("seven_day_sales_odyssey").textContent = podaci_odyssey.
 })
   .catch(err => console.error(err));
 	
-const options_wonderpals = {method: 'GET', headers: {Accept: 'application/json'}};
-fetch('https://api.opensea.io/api/v1/collection/wonderpals/stats', options_wonderpals)
+
+
+
+	
+const options_wonderpals = {
+	method: 'GET', 
+	headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}
+};
+fetch('https://api.opensea.io/v2/listings/collection/wonderpals/all', options_wonderpals)
   .then(response => response.json())
   .then(data => {let podaci_wonderpals = data;
 wonderpals_fp = podaci_wonderpals.stats.floor_price.toFixed(3);		 
