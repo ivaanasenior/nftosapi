@@ -287,7 +287,7 @@ const options_uw = {method: 'GET', headers: {accept: 'application/json', 'X-API-
 fetch('https://api.opensea.io/api/v1/collection/utilitywen/stats', options_uw)
   .then(response => response.json())
   .then(data => {let podaci_uw = data;
-cd_uw = podaci_uw.stats.floor_price.toFixed(3);		 
+uw_fp = podaci_uw.stats.floor_price.toFixed(3);		 
 document.getElementById("floor_price_uw").textContent = uw_fp; 
 document.getElementById("one_hour_sales_uw").textContent = podaci_uw.stats.one_hour_sales; 		 
 document.getElementById("one_day_sales_uw").textContent = podaci_uw.stats.one_day_sales; 
