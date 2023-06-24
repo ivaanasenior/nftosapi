@@ -427,7 +427,7 @@ const options_wonderpals = {
 	method: 'GET', 
 	headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}
 };
-fetch('https://api.opensea.io/v2/orders/ethereum/seaport/listings?asset_contract_address=0x3Acce66cD37518A6d77d9ea3039E00B3A2955460&token_ids=1&token_ids=9999&order_by=eth_price&order_direction=desc', options_wonderpals)
+fetch('https://api.opensea.io/api/v1/collection/wonderpals/stats', options_wonderpals)
   .then(response => response.json())
   .then(data => {let podaci_wonderpals = data;
 wonderpals_fp = podaci_wonderpals.stats.floor_price.toFixed(3);		 
