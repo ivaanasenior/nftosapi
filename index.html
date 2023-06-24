@@ -273,7 +273,7 @@ table.inline {
 
 
 <script>	
-const options_cd = {method: 'GET', headers: {Accept: 'application/json'}};
+const options_cd = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
 fetch('https://api.opensea.io/api/v1/collection/cooldogsofficial/stats', options_cd)
   .then(response => response.json())
   .then(data => {let podaci_cd = data;
@@ -286,7 +286,7 @@ document.getElementById("seven_day_sales_cd").textContent = podaci_cd.stats.seve
 })
   .catch(err => console.error(err));
 	
-const options_ff = {method: 'GET', headers: {Accept: 'application/json'}};
+const options_ff = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
 fetch('https://api.opensea.io/api/v1/collection/fortune-friends-club-official-nft/stats', options_ff)
   .then(response => response.json())
   .then(data => {let podaci_ff = data;
@@ -299,7 +299,7 @@ document.getElementById("seven_day_sales_ff").textContent = podaci_ff.stats.seve
   .catch(err => console.error(err)); 	
 
 	
-const options_mtg = {method: 'GET', headers: {Accept: 'application/json'}};
+const options_mtg = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
 fetch('https://api.opensea.io/api/v1/collection/morethangamersnftmtg/stats', options_mtg)
   .then(response => response.json())
   .then(data => {let podaci_mtg = data;
@@ -311,7 +311,7 @@ document.getElementById("seven_day_sales_mtg").textContent = podaci_mtg.stats.se
   .catch(err => console.error(err)); 	
 
 
-const options_spaceriders = {method: 'GET', headers: {Accept: 'application/json'}};
+const options_spaceriders = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
 fetch('https://api.opensea.io/api/v1/collection/spaceridersnft/stats', options_spaceriders)
   .then(response => response.json())
   .then(data => {let podaci_spaceriders = data;
@@ -324,7 +324,7 @@ document.getElementById("seven_day_sales_spaceriders").textContent = podaci_spac
   .catch(err => console.error(err)); 
 	
 
-const options_tp = {method: 'GET', headers: {Accept: 'application/json'}};
+const options_tp = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
 fetch('https://api.opensea.io/api/v1/collection/the-plague/stats', options_tp)
   .then(response => response.json())
   .then(data => {let podaci_tp = data;
@@ -336,7 +336,7 @@ document.getElementById("seven_day_sales_tp").textContent = podaci_tp.stats.seve
 })
   .catch(err => console.error(err)); 	
 
-const options_up = {method: 'GET', headers: {Accept: 'application/json'}};
+const options_up = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
 fetch('https://api.opensea.io/api/v1/collection/ugly-people-torrealba/stats', options_up)
   .then(response => response.json())
   .then(data => {let podaci_up = data;
@@ -348,7 +348,7 @@ document.getElementById("seven_day_sales_up").textContent = podaci_up.stats.seve
 })
   .catch(err => console.error(err)); 	
 
-const options_fef = {method: 'GET', headers: {Accept: 'application/json'}};
+const options_fef = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
 fetch('https://api.opensea.io/api/v1/collection/felinefiendznft/stats', options_fef)
   .then(response => response.json())
   .then(data => {let podaci_fef = data;
@@ -359,7 +359,7 @@ document.getElementById("seven_day_sales_fef").textContent = podaci_fef.stats.se
 })
   .catch(err => console.error(err)); 
 
-const options_sek = {method: 'GET', headers: {Accept: 'application/json'}};
+const options_sek = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
 fetch('https://api.opensea.io/api/v1/collection/sekaiclub/stats', options_sek)
   .then(response => response.json())
   .then(data => {let podaci_sek = data;
@@ -371,7 +371,7 @@ document.getElementById("seven_day_sales_sek").textContent = podaci_sek.stats.se
 })
   .catch(err => console.error(err));
 
-const options_stoner = {method: 'GET', headers: {Accept: 'application/json'}};
+const options_stoner = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
 fetch('https://api.opensea.io/api/v1/collection/sac/stats', options_stoner)
   .then(response => response.json())
   .then(data => {let podaci_stoner = data;
@@ -383,7 +383,7 @@ document.getElementById("seven_day_sales_stoner").textContent = podaci_stoner.st
 })
   .catch(err => console.error(err));
 	
-const options_seals = {method: 'GET', headers: {Accept: 'application/json'}};
+const options_seals = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
 fetch('https://api.opensea.io/api/v1/collection/sappy-seals/stats', options_seals)
   .then(response => response.json())
   .then(data => {let podaci_seals = data;
@@ -395,7 +395,7 @@ document.getElementById("seven_day_sales_seals").textContent = podaci_seals.stat
 })
   .catch(err => console.error(err));	
 	
-const options_alienfrens = {method: 'GET', headers: {Accept: 'application/json'}};
+const options_alienfrens = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
 fetch('https://api.opensea.io/api/v1/collection/alienfrensnft/stats', options_alienfrens)
   .then(response => response.json())
   .then(data => {let podaci_alienfrens = data;
@@ -407,7 +407,7 @@ document.getElementById("seven_day_sales_alienfrens").textContent = podaci_alien
 })
   .catch(err => console.error(err));
 	
-const options_odyssey = {method: 'GET', headers: {Accept: 'application/json'}};
+const options_odyssey = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
 fetch('https://api.opensea.io/api/v1/collection/arbitrum-odyssey-nft/stats', options_odyssey)
   .then(response => response.json())
   .then(data => {let podaci_odyssey = data;
@@ -445,7 +445,7 @@ document.getElementById("seven_day_sales_wonderpals").textContent = podaci_wonde
 
 	
 	
-const options_undead = {method: 'GET', headers: {Accept: 'application/json'}};
+const options_undead = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
 fetch('https://api.opensea.io/api/v1/collection/genuine-undead/stats', options_undead)
   .then(response => response.json())
   .then(data => {let podaci_undead = data;
@@ -457,7 +457,7 @@ document.getElementById("seven_day_sales_undead").textContent = podaci_undead.st
 })
   .catch(err => console.error(err));
 	
-const options_psa = {method: 'GET', headers: {Accept: 'application/json'}};
+const options_psa = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
 fetch('https://api.opensea.io/api/v1/collection/psychedelics-anonymous-genesis/stats', options_psa)
   .then(response => response.json())
   .then(data => {let podaci_psa = data;
@@ -470,7 +470,7 @@ document.getElementById("seven_day_sales_psa").textContent = podaci_psa.stats.se
   .catch(err => console.error(err));
 	
 	
-const options_mojaadresa = {method: 'GET', headers: {Accept: 'application/json'}};
+const options_mojaadresa = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
 fetch('https://api.etherscan.io/api?module=account&action=balance&address=0x62FFEFD4F48ae27F04233Ee053f676e2F772837b', options_mojaadresa)
   .then(response => response.json())
   .then(data => {let podaci_mojaadresa = data;
@@ -479,7 +479,7 @@ document.getElementById("one_day_sales_mojaadresa").textContent = mojestanje.toF
 })
   .catch(err => console.error(err));
 	
-const options_mojarb = {method: 'GET', headers: {Accept: 'application/json'}};
+const options_mojarb = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
 fetch('https://api.arbiscan.io/api?module=account&action=balance&address=0x62FFEFD4F48ae27F04233Ee053f676e2F772837b&tag=latest&apikey=YourApiKeyToken', options_mojarb)
   .then(response => response.json())
   .then(data => {let p_mojarb = data;
