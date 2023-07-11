@@ -305,30 +305,30 @@ document.getElementById("seven_day_sales_uw").textContent = podaci_uw.stats.seve
   .catch(err => console.error(err));
 
 	
-const options_cd = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
-fetch('https://api.opensea.io/api/v1/collection/cooldogsofficial/stats', options_cd)
-  .then(response => response.json())
-  .then(data => {let podaci_cd = data;
-cd_fp = podaci_cd.stats.floor_price.toFixed(3);		 
-document.getElementById("floor_price_cd").textContent = cd_fp; 
-document.getElementById("one_hour_sales_cd").textContent = podaci_cd.stats.one_hour_sales; 		 
-document.getElementById("one_day_sales_cd").textContent = podaci_cd.stats.one_day_sales; 
-document.getElementById("seven_day_sales_cd").textContent = podaci_cd.stats.seven_day_sales;  
-		 
-})
-  .catch(err => console.error(err));
+//const options_cd = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
+//fetch('https://api.opensea.io/api/v1/collection/cooldogsofficial/stats', options_cd)
+//  .then(response => response.json())
+//  .then(data => {let podaci_cd = data;
+//cd_fp = podaci_cd.stats.floor_price.toFixed(3);		 
+//document.getElementById("floor_price_cd").textContent = cd_fp; 
+//document.getElementById("one_hour_sales_cd").textContent = podaci_cd.stats.one_hour_sales; 		 
+//document.getElementById("one_day_sales_cd").textContent = podaci_cd.stats.one_day_sales; 
+//document.getElementById("seven_day_sales_cd").textContent = podaci_cd.stats.seven_day_sales;  
+//		 
+//})
+//  .catch(err => console.error(err));
 	
-const options_ff = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
-fetch('https://api.opensea.io/api/v1/collection/fortune-friends-club-official-nft/stats', options_ff)
-  .then(response => response.json())
-  .then(data => {let podaci_ff = data;
-window.ff_fp = podaci_ff.stats.floor_price.toFixed(3);		 
-document.getElementById("floor_price_ff").textContent = ff_fp; 
-document.getElementById("one_hour_sales_ff").textContent = podaci_ff.stats.one_hour_sales;		 
-document.getElementById("one_day_sales_ff").textContent = podaci_ff.stats.one_day_sales; 
-document.getElementById("seven_day_sales_ff").textContent = podaci_ff.stats.seven_day_sales;  
-})
-  .catch(err => console.error(err)); 	
+//const options_ff = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
+//fetch('https://api.opensea.io/api/v1/collection/fortune-friends-club-official-nft/stats', options_ff)
+//  .then(response => response.json())
+//  .then(data => {let podaci_ff = data;
+//window.ff_fp = podaci_ff.stats.floor_price.toFixed(3);		 
+//document.getElementById("floor_price_ff").textContent = ff_fp; 
+//document.getElementById("one_hour_sales_ff").textContent = podaci_ff.stats.one_hour_sales;		 
+//document.getElementById("one_day_sales_ff").textContent = podaci_ff.stats.one_day_sales; 
+//document.getElementById("seven_day_sales_ff").textContent = podaci_ff.stats.seven_day_sales;  
+//})
+//  .catch(err => console.error(err)); 	
 
 	
 const options_mtg = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
@@ -343,17 +343,17 @@ document.getElementById("seven_day_sales_mtg").textContent = podaci_mtg.stats.se
   .catch(err => console.error(err)); 	
 
 
-const options_spaceriders = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
-fetch('https://api.opensea.io/api/v1/collection/spaceridersnft/stats', options_spaceriders)
-  .then(response => response.json())
-  .then(data => {let podaci_spaceriders = data;
-spaceriders_fp = podaci_spaceriders.stats.floor_price.toFixed(3);		 
-document.getElementById("floor_price_spaceriders").textContent = spaceriders_fp; 
-document.getElementById("one_hour_sales_spaceriders").textContent = podaci_spaceriders.stats.one_hour_sales;		 
-document.getElementById("one_day_sales_spaceriders").textContent = podaci_spaceriders.stats.one_day_sales; 
-document.getElementById("seven_day_sales_spaceriders").textContent = podaci_spaceriders.stats.seven_day_sales; 
-})
-  .catch(err => console.error(err)); 
+//const options_spaceriders = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
+//fetch('https://api.opensea.io/api/v1/collection/spaceridersnft/stats', options_spaceriders)
+//  .then(response => response.json())
+//  .then(data => {let podaci_spaceriders = data;
+//spaceriders_fp = podaci_spaceriders.stats.floor_price.toFixed(3);		 
+//document.getElementById("floor_price_spaceriders").textContent = spaceriders_fp; 
+//document.getElementById("one_hour_sales_spaceriders").textContent = podaci_spaceriders.stats.one_hour_sales;		 
+//document.getElementById("one_day_sales_spaceriders").textContent = podaci_spaceriders.stats.one_day_sales; 
+//document.getElementById("seven_day_sales_spaceriders").textContent = podaci_spaceriders.stats.seven_day_sales; 
+//})
+//  .catch(err => console.error(err)); 
 	
 
 const options_tp = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
@@ -380,77 +380,40 @@ document.getElementById("seven_day_sales_up").textContent = podaci_up.stats.seve
 })
   .catch(err => console.error(err)); 	
 
-const options_fef = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
-fetch('https://api.opensea.io/api/v1/collection/felinefiendznft/stats', options_fef)
-  .then(response => response.json())
-  .then(data => {let podaci_fef = data;
-document.getElementById("floor_price_fef").textContent = podaci_fef.stats.floor_price.toFixed(3); 
-document.getElementById("one_hour_sales_fef").textContent = podaci_fef.stats.one_hour_sales;		 
-document.getElementById("one_day_sales_fef").textContent = podaci_fef.stats.one_day_sales; 
-document.getElementById("seven_day_sales_fef").textContent = podaci_fef.stats.seven_day_sales; 
-})
-  .catch(err => console.error(err)); 
-
-const options_sek = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
-fetch('https://api.opensea.io/api/v1/collection/sekaiclub/stats', options_sek)
-  .then(response => response.json())
-  .then(data => {let podaci_sek = data;
-sek_fp = podaci_sek.stats.floor_price.toFixed(3);		 
-document.getElementById("floor_price_sek").textContent = sek_fp;
-document.getElementById("one_hour_sales_sek").textContent = podaci_sek.stats.one_hour_sales;		 
-document.getElementById("one_day_sales_sek").textContent = podaci_sek.stats.one_day_sales; 
-document.getElementById("seven_day_sales_sek").textContent = podaci_sek.stats.seven_day_sales; 
-})
-  .catch(err => console.error(err));
-
-const options_stoner = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
-fetch('https://api.opensea.io/api/v1/collection/sac/stats', options_stoner)
-  .then(response => response.json())
-  .then(data => {let podaci_stoner = data;
-stoner_fp = podaci_stoner.stats.floor_price.toFixed(3);		 
-document.getElementById("floor_price_stoner").textContent = stoner_fp; 
-document.getElementById("one_hour_sales_stoner").textContent = podaci_stoner.stats.one_hour_sales;		 
-document.getElementById("one_day_sales_stoner").textContent = podaci_stoner.stats.one_day_sales; 
-document.getElementById("seven_day_sales_stoner").textContent = podaci_stoner.stats.seven_day_sales;  
-})
-  .catch(err => console.error(err));
+//const options_fef = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
+//fetch('https://api.opensea.io/api/v1/collection/felinefiendznft/stats', options_fef)
+//  .then(response => response.json())
+//  .then(data => {let podaci_fef = data;
+//document.getElementById("floor_price_fef").textContent = podaci_fef.stats.floor_price.toFixed(3); 
+//document.getElementById("one_hour_sales_fef").textContent = podaci_fef.stats.one_hour_sales;		 
+//document.getElementById("one_day_sales_fef").textContent = podaci_fef.stats.one_day_sales; 
+//document.getElementById("seven_day_sales_fef").textContent = podaci_fef.stats.seven_day_sales; 
+//})
+//  .catch(err => console.error(err)); 
 	
-const options_seals = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
-fetch('https://api.opensea.io/api/v1/collection/sappy-seals/stats', options_seals)
-  .then(response => response.json())
-  .then(data => {let podaci_seals = data;
-seals_fp = podaci_seals.stats.floor_price.toFixed(3);		 
-document.getElementById("floor_price_seals").textContent = seals_fp; 
-document.getElementById("one_hour_sales_seals").textContent = podaci_seals.stats.one_hour_sales;		 
-document.getElementById("one_day_sales_seals").textContent = podaci_seals.stats.one_day_sales; 
-document.getElementById("seven_day_sales_seals").textContent = podaci_seals.stats.seven_day_sales; 
-})
-  .catch(err => console.error(err));	
+//const options_seals = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
+//fetch('https://api.opensea.io/api/v1/collection/sappy-seals/stats', options_seals)
+//  .then(response => response.json())
+//  .then(data => {let podaci_seals = data;
+//seals_fp = podaci_seals.stats.floor_price.toFixed(3);		 
+//document.getElementById("floor_price_seals").textContent = seals_fp; 
+//document.getElementById("one_hour_sales_seals").textContent = podaci_seals.stats.one_hour_sales;		 
+//document.getElementById("one_day_sales_seals").textContent = podaci_seals.stats.one_day_sales; 
+//document.getElementById("seven_day_sales_seals").textContent = podaci_seals.stats.seven_day_sales; 
+//})
+//  .catch(err => console.error(err));	
 	
-const options_alienfrens = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
-fetch('https://api.opensea.io/api/v1/collection/alienfrensnft/stats', options_alienfrens)
-  .then(response => response.json())
-  .then(data => {let podaci_alienfrens = data;
-alienfrens_fp = podaci_alienfrens.stats.floor_price.toFixed(3);		 
-document.getElementById("floor_price_alienfrens").textContent = alienfrens_fp; 
-document.getElementById("one_hour_sales_alienfrens").textContent = podaci_alienfrens.stats.one_hour_sales;		 
-document.getElementById("one_day_sales_alienfrens").textContent = podaci_alienfrens.stats.one_day_sales; 
-document.getElementById("seven_day_sales_alienfrens").textContent = podaci_alienfrens.stats.seven_day_sales; 
-})
-  .catch(err => console.error(err));
-	
-const options_odyssey = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
-fetch('https://api.opensea.io/api/v1/collection/arbitrum-odyssey-nft/stats', options_odyssey)
-  .then(response => response.json())
-  .then(data => {let podaci_odyssey = data;
-odyssey_fp = podaci_odyssey.stats.floor_price.toFixed(3);		 
-document.getElementById("floor_price_odyssey").textContent = odyssey_fp; 
-document.getElementById("one_hour_sales_odyssey").textContent = podaci_odyssey.stats.one_hour_sales;		 
-document.getElementById("one_day_sales_odyssey").textContent = podaci_odyssey.stats.one_day_sales; 
-document.getElementById("seven_day_sales_odyssey").textContent = podaci_odyssey.stats.seven_day_sales; 
-})
-  .catch(err => console.error(err));
-	
+//const options_alienfrens = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
+//fetch('https://api.opensea.io/api/v1/collection/alienfrensnft/stats', options_alienfrens)
+//  .then(response => response.json())
+//  .then(data => {let podaci_alienfrens = data;
+//alienfrens_fp = podaci_alienfrens.stats.floor_price.toFixed(3);		 
+//document.getElementById("floor_price_alienfrens").textContent = alienfrens_fp; 
+//document.getElementById("one_hour_sales_alienfrens").textContent = podaci_alienfrens.stats.one_hour_sales;		 
+//document.getElementById("one_day_sales_alienfrens").textContent = podaci_alienfrens.stats.one_day_sales; 
+//document.getElementById("seven_day_sales_alienfrens").textContent = podaci_alienfrens.stats.seven_day_sales; 
+//})
+//  .catch(err => console.error(err));
 	
 const options_wonderpals = {
 	method: 'GET', 
@@ -468,29 +431,29 @@ document.getElementById("seven_day_sales_wonderpals").textContent = podaci_wonde
   .catch(err => console.error(err));
 
 	
-const options_undead = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
-fetch('https://api.opensea.io/api/v1/collection/genuine-undead/stats', options_undead)
-  .then(response => response.json())
-  .then(data => {let podaci_undead = data;
-undead_fp = podaci_undead.stats.floor_price.toFixed(3);		 
-document.getElementById("floor_price_undead").textContent = undead_fp; 
-document.getElementById("one_hour_sales_undead").textContent = podaci_undead.stats.one_hour_sales;		 
-document.getElementById("one_day_sales_undead").textContent = podaci_undead.stats.one_day_sales; 
-document.getElementById("seven_day_sales_undead").textContent = podaci_undead.stats.seven_day_sales; 
-})
-  .catch(err => console.error(err));
+//const options_undead = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
+//fetch('https://api.opensea.io/api/v1/collection/genuine-undead/stats', options_undead)
+//  .then(response => response.json())
+//  .then(data => {let podaci_undead = data;
+//undead_fp = podaci_undead.stats.floor_price.toFixed(3);		 
+//document.getElementById("floor_price_undead").textContent = undead_fp; 
+//document.getElementById("one_hour_sales_undead").textContent = podaci_undead.stats.one_hour_sales;		 
+//document.getElementById("one_day_sales_undead").textContent = podaci_undead.stats.one_day_sales; 
+//document.getElementById("seven_day_sales_undead").textContent = podaci_undead.stats.seven_day_sales; 
+//})
+//  .catch(err => console.error(err));
 	
-const options_psa = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
-fetch('https://api.opensea.io/api/v1/collection/psychedelics-anonymous-genesis/stats', options_psa)
-  .then(response => response.json())
-  .then(data => {let podaci_psa = data;
-psa_fp = podaci_psa.stats.floor_price.toFixed(3);		 
-document.getElementById("floor_price_psa").textContent = psa_fp; 
-document.getElementById("one_hour_sales_psa").textContent = podaci_psa.stats.one_hour_sales;		 
-document.getElementById("one_day_sales_psa").textContent = podaci_psa.stats.one_day_sales; 
-document.getElementById("seven_day_sales_psa").textContent = podaci_psa.stats.seven_day_sales; 
-})
-  .catch(err => console.error(err));
+//const options_psa = {method: 'GET', headers: {accept: 'application/json', 'X-API-KEY': 'a3243bf6d4604ea99abbd3c1cd4160d2'}};
+//fetch('https://api.opensea.io/api/v1/collection/psychedelics-anonymous-genesis/stats', options_psa)
+//  .then(response => response.json())
+//  .then(data => {let podaci_psa = data;
+//psa_fp = podaci_psa.stats.floor_price.toFixed(3);		 
+//document.getElementById("floor_price_psa").textContent = psa_fp; 
+//document.getElementById("one_hour_sales_psa").textContent = podaci_psa.stats.one_hour_sales;		 
+//document.getElementById("one_day_sales_psa").textContent = podaci_psa.stats.one_day_sales; 
+//document.getElementById("seven_day_sales_psa").textContent = podaci_psa.stats.seven_day_sales; 
+//})
+//  .catch(err => console.error(err));
 	
 	
 const options_mojaadresa = {method: 'GET', headers: {accept: 'application/json'}};
