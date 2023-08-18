@@ -16,19 +16,19 @@ background: black;}
     }
 
     .sales-card img {
-      max-width: 150px;
-      max-height: 150px;
+      max-width: 130px;
+      max-height: 130px;
       margin-right: 10px;
     }
   .time {
       font-weight: normal;
-      font-size: 1.7em;
+      font-size: 1.2em;
       color: white;
     }
     .price {
       font-weight: bold;
       font-size: 2em;
-      color: yellow;
+      color: white;
     }
   </style>
 </head>
@@ -96,7 +96,7 @@ background: black;}
         const saleInfo = document.createElement('div');
         saleInfo.innerHTML = `
           <p><strong></strong> <span class="time">${timeSince(sale.created_date)}</span></p>
-          <p><strong></strong> <span class="price">${formatEther(sale.total_price)} ETH</span></p>
+          <p><strong></strong> <span class="price">${formatEther(sale.total_price)} </span></p>
         `;
         saleCard.appendChild(saleInfo);
 
