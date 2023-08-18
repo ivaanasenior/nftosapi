@@ -16,18 +16,18 @@ background: black;}
     }
 
     .sales-card img {
-      max-width: 150px;
-      max-height: 150px;
+      max-width: 100px;
+      max-height: 100px;
       margin-right: 10px;
     }
   .time {
       font-weight: normal;
-      font-size: 20epx;
+      font-size: 18epx;
       color: white;
     }
     .price {
       font-weight: bold;
-      font-size: 45px;
+      font-size: 40px;
       color: yellow;
     }
   </style>
@@ -56,21 +56,21 @@ background: black;}
   const seconds = Math.floor((currentTime - saleTime) / 1000) -7200;
 
   if (seconds < 60) {
-    return seconds + ' seconds ago';
+    return 'pre ' + seconds + ' sekundi';
   }
 
   const minutes = Math.floor(seconds / 60);
   if (minutes < 60) {
-    return minutes + ' minutes ago';
+    return 'pre ' + minutes + ' minuta';
   }
 
   const hours = Math.floor(minutes / 60);
   if (hours < 24) {
-    return hours + ' hours ago';
+    return 'pre ' + hours +' sati';
   }
 
   const days = Math.floor(hours / 24);
-  return days + ' days ago';
+  return 'pre ' + days + ' dana';
 }
 
 
@@ -95,7 +95,7 @@ background: black;}
         const saleInfo = document.createElement('div');
         saleInfo.innerHTML = `
           <p><strong></strong> <span class="time">${timeSince(sale.created_date)}</span></p>
-          <p><strong></strong> <span class="price">${formatEther(sale.total_price)} ETH</span></p>
+          <p><strong></strong> <span class="price">${formatEther(sale.total_price)} </span></p>
         `;
         saleCard.appendChild(saleInfo);
 
