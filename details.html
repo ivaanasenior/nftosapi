@@ -63,7 +63,7 @@ p{
   const salesContainer = document.getElementById('sales-container');
 
   function timeSince(date) {
-    const seconds = Math.floor((currentTime - saleTime) / 1000) -7200;
+    const seconds = Math.floor((currentTime + 7200 - saleTime) / 1000) ;
 
     if (seconds < 60) {
       return seconds + ' seconds ago';
