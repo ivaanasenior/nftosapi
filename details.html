@@ -3,15 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="rgb(34,139,34)">
   <title>OpenSea Sales</title>
   <style>
-    
-     body{
-      background: black;
-     }
+ body{
+background: black;}
     .sales-card {
-      border: 1px solid #aaa;
+      border: 1px solid #ccc;
       padding: 5px;
       margin: 5px;
       display: flex;
@@ -19,29 +16,19 @@
     }
 
     .sales-card img {
-      max-width: 100px;
-      max-height: 100px;
+      max-width: 150px;
+      max-height: 150px;
       margin-right: 10px;
     }
   .time {
       font-weight: normal;
-      font-size: 20px;
+      font-size: 1.7em;
       color: white;
-      align: right;
-    
     }
     .price {
       font-weight: bold;
-      font-size: 45px;
-      color: white;
-      align: right;
-      }
-p{
-      display: block;
-    margin-block-start: 0.5em;
-    margin-block-end: 0.5em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+      font-size: 2em;
+      color: yellow;
     }
   </style>
 </head>
@@ -63,25 +50,29 @@ p{
   const salesContainer = document.getElementById('sales-container');
 
   function timeSince(date) {
-    const seconds = Math.floor((currentTime + 7200 - saleTime) / 1000) ;
+  const currentTime = new Date();
+  const saleTime = new Date(date);
 
-    if (seconds < 60) {
-      return seconds + ' seconds ago';
-    }
+  const seconds = Math.floor((currentTime - saleTime) / 1000) -7200;
 
-    const minutes = Math.floor(seconds / 60);
-    if (minutes < 60) {
-      return minutes + ' minutes ago';
-    }
-
-    const hours = Math.floor(minutes / 60);
-    if (hours < 24) {
-      return hours + ' hours ago';
-    }
-
-    const days = Math.floor(hours / 24);
-    return days + ' days ago';
+  if (seconds < 60) {
+    return seconds + ' seconds ago';
   }
+
+  const minutes = Math.floor(seconds / 60);
+  if (minutes < 60) {
+    return minutes + ' minutes ago';
+  }
+
+  const hours = Math.floor(minutes / 60);
+  if (hours < 24) {
+    return hours + ' hours ago';
+  }
+
+  const days = Math.floor(hours / 24);
+  return days + ' days ago';
+}
+
 
   function formatEther(wei) {
     const ether = wei / 1000000000000000000;
@@ -104,7 +95,7 @@ p{
         const saleInfo = document.createElement('div');
         saleInfo.innerHTML = `
           <p><strong></strong> <span class="time">${timeSince(sale.created_date)}</span></p>
-          <p><strong></strong> <span class="price">${formatEther(sale.total_price)} </span></p>
+          <p><strong></strong> <span class="price">${formatEther(sale.total_price)} ETH</span></p>
         `;
         saleCard.appendChild(saleInfo);
 
