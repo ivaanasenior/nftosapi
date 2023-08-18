@@ -39,6 +39,19 @@ background: black;}
 
 
 <script>
+    const salesContainer = document.getElementById('sales-container');
+    const contractAddress = getParameterByName('contract');
+
+    function getParameterByName(name, url = window.location.href) {
+      name = name.replace(/[\[\]]/g, '\\$&');
+      const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+      const results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+  
   const options = {
     method: 'GET',
     headers: {
@@ -79,7 +92,7 @@ background: black;}
     return ether.toFixed(3); // Display with three decimal places
   }
 
-  fetch('https://api.opensea.io/api/v1/events?only_opensea=false&asset_contract_address=0x209e639a0EC166Ac7a1A4bA41968fa967dB30221&event_type=successful', options)
+  fetch(`https://api.opensea.io/api/v1/events?only_opensea=false&asset_contract_address=${contractAddress}&event_type=successful`, options)
     .then(response => response.json())
     .then(data => {
       const last10Sales = data.asset_events.slice(0, 10);
