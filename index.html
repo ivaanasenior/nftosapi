@@ -207,7 +207,15 @@ table.inline {
 	    	<td><a id="one_day_sales_undead" class="prevent-select"></a></td>
             	<td><a id="seven_day_sales_undead" class="prevent-select"></a></td> 
 	</tr>
-	
+	<tr onclick="window.location='details.html?contract=0x209e639a0EC166Ac7a1A4bA41968fa967dB30221';">      
+	 <td>
+		<img src="https://i.seadn.io/gae/80yXYN287mZWxZhcBImQes5pVi19Tm5X9q2xj6DU2o_WUJKB1AybLpiFv2nL2WL00c3idD_XAL12wZLKsV1jzL8x2fTYlakHZg3JxA?auto=format&dpr=1&w=256" width="50" height="50">
+		</td>
+	    	<td style="text-align:right" class="prevent-select"><h2 id="floor_kaiju_kingz"></h2></td>
+		<td><a id="one_hour_sales_kaiju_kingz" class="prevent-select"></a></td>
+	    	<td><a id="one_day_sales_kaiju_kingz" class="prevent-select"></a></td>
+            	<td><a id="seven_day_sales_kaiju_kingz" class="prevent-select"></a></td> 
+	</tr>
     </tbody>
 </table>
 <script>	
@@ -267,7 +275,15 @@ const collections = [
       sevenDaySales: 'seven_day_sales_undead',
     },
   },
-
+{
+    name: 'kaiju-kingz',
+    ids: {
+      floorPrice: 'floor_price_kaiju-kingz',
+      oneHourSales: 'one_hour_sales_kaiju-kingz',
+      oneDaySales: 'one_day_sales_kaiju-kingz',
+      sevenDaySales: 'seven_day_sales_kaiju-kingz',
+    },
+  },
   // Add more collections here with their corresponding IDs
 ];
 const fetchStats = async (collection) => {
